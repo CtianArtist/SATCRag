@@ -1,0 +1,60 @@
+[
+  {"id": "syn-who-1", "question_type": "who_said", "style": "lexical",
+   "question": "Who named the sourdough starter Gerald?", "expected_answer": "Nora (S1E1)",
+   "season": 1, "episode": 1, "source_row_start": 6, "source_row_end": 8, "expected_quote": "The starter is named"},
+  {"id": "syn-who-2", "question_type": "who_said", "style": "paraphrase",
+   "question": "Who made a stack of posters for the missing dog?", "expected_answer": "Samuel Price (S1E2)",
+   "season": 1, "episode": 2, "source_row_start": 6, "source_row_end": 7, "expected_quote": "I printed two hundred posters"},
+  {"id": "syn-fact-1", "question_type": "scene_fact", "style": "paraphrase",
+   "question": "Where was the missing greyhound found?", "expected_answer": "Asleep under the bakery counter, next to the flour sacks (S1E2)",
+   "season": 1, "episode": 2, "source_row_start": 13, "source_row_end": 13, "expected_quote": "asleep under the counter",
+   "evidence": [{"season": 1, "episode": 2, "source_row_start": 0, "source_row_end": 0,
+                 "expected_quote": "a grey greyhound named Pickle", "role": "premise"}]},
+  {"id": "syn-fact-2", "question_type": "scene_fact", "style": "lexical",
+   "question": "What title does Theo suggest for the cobalt harbor painting?", "expected_answer": "Low Tide in Cobalt (S2E1)",
+   "season": 2, "episode": 1, "source_row_start": 2, "source_row_end": 4, "expected_quote": "Low Tide in Cobalt"},
+  {"id": "syn-fact-3", "question_type": "scene_fact", "style": "paraphrase",
+   "question": "What kind of oven does the new bakery have?", "expected_answer": "A wood-fired oven (S1E1)",
+   "targets": [
+     {"season": 1, "episode": 1, "source_row_start": 2, "source_row_end": 2, "expected_quote": "wood-fired oven"},
+     {"season": 1, "episode": 1, "source_row_start": 3, "source_row_end": 3, "expected_quote": "wood-fired"}
+   ],
+   "requires_all_targets": false},
+  {"id": "syn-seq-1", "question_type": "sequence", "style": "event",
+   "question": "Right after the first batch comes out burnt, what does Theo tell Nora to do?",
+   "expected_answer": "Start again; she still has until Saturday (S1E1)",
+   "targets": [
+     {"season": 1, "episode": 1, "source_row_start": 12, "source_row_end": 14, "expected_quote": "The first batch is ruined", "role": "anchor"},
+     {"season": 1, "episode": 1, "source_row_start": 15, "source_row_end": 16, "expected_quote": "Start again", "role": "answer"}
+   ],
+   "requires_all_targets": true},
+  {"id": "syn-seq-2", "question_type": "sequence", "style": "event",
+   "question": "When a thunderstorm is forecast for the rooftop party, where does Iris suggest they go?",
+   "expected_answer": "To the stairwell (S2E2)",
+   "targets": [
+     {"season": 2, "episode": 2, "source_row_start": 3, "source_row_end": 4, "expected_quote": "a thunderstorm", "role": "anchor"},
+     {"season": 2, "episode": 2, "source_row_start": 5, "source_row_end": 5, "expected_quote": "move the party to the stairwell", "role": "answer"}
+   ],
+   "requires_all_targets": true},
+  {"id": "syn-arc-1", "question_type": "arc", "style": "multi_evidence",
+   "question": "What food does Nora bring to her friends' events after the bakery opens?",
+   "expected_answer": "Mini croissants for the gallery opening; forty cinnamon knots and an apology loaf for the rooftop party",
+   "targets": [
+     {"season": 2, "episode": 1, "source_row_start": 11, "source_row_end": 11, "expected_quote": "Mini croissants"},
+     {"season": 2, "episode": 2, "source_row_start": 2, "source_row_end": 2, "expected_quote": "forty cinnamon knots"}
+   ],
+   "requires_all_targets": true},
+  {"id": "syn-ep-1", "question_type": "episode", "style": "paraphrase",
+   "question": "In the episode where a greyhound goes missing, who lost him?",
+   "expected_answer": "Samuel Price, who says the dog slipped his collar near the fountain (S1E2)",
+   "season": 1, "episode": 2, "source_row_start": 1, "source_row_end": 3, "expected_quote": "He slipped his collar",
+   "evidence": [{"season": 1, "episode": 2, "source_row_start": 0, "source_row_end": 0,
+                 "expected_quote": "grey greyhound", "role": "premise"}]},
+  {"id": "syn-fact-4", "question_type": "scene_fact", "style": "relationship",
+   "question": "What does Iris say the rooftop looks like, and what happens to the lanterns?",
+   "expected_answer": "Like a festival, with paper lanterns everywhere; the lanterns melt in the rain (S2E2)",
+   "required_groups": [
+     {"mode": "all", "targets": [{"season": 2, "episode": 2, "source_row_start": 1, "source_row_end": 1, "expected_quote": "Paper lanterns everywhere"}]},
+     {"mode": "all", "targets": [{"season": 2, "episode": 2, "source_row_start": 7, "source_row_end": 7, "expected_quote": "melting in the rain"}]}
+   ]}
+]

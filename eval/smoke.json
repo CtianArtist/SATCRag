@@ -1,30 +1,68 @@
 [
-  {"id": "smoke-01", "type": "who_said",
-   "question": "Who says \"I don't do plants\"?",
-   "expected_answer": "Carrie",
-   "season": 4, "episode": 13, "source_row_start": 18, "source_row_end": 18,
-   "expected_quote": "I don't do plants"},
-  {"id": "smoke-02", "type": "who_said",
-   "question": "Who says that instead of breakfast at Tiffany's we have breakfast at 7:00 a.m. and affairs we try to forget?",
-   "expected_answer": "Carrie",
-   "season": 1, "episode": 1, "source_row_start": 37, "source_row_end": 38,
-   "expected_quote": "we have breakfast at 7:00 a.m. and affairs we try to forget"},
-  {"id": "smoke-03", "type": "scene_fact",
-   "question": "When Aidan moves in, what does Carrie complain his new work area is blocking?",
-   "expected_answer": "Her bathroom door",
-   "season": 4, "episode": 13, "source_row_start": 4, "source_row_end": 9,
-   "expected_quote": "you're blocking the bathroom door"},
-  {"id": "smoke-04", "type": "multi_target",
-   "question": "How does Carrie describe the way Berger ended their relationship?",
-   "expected_answer": "He broke up with her on a Post-it",
-   "targets": [
-     {"season": 6, "episode": 7, "source_row_start": 19, "source_row_end": 19,
-      "expected_quote": "Berger broke up with me on a Post-it"},
-     {"season": 6, "episode": 7, "source_row_start": 257, "source_row_end": 257,
-      "expected_quote": "Berger broke up with me on a Post-it"}
-   ]},
-  {"id": "smoke-05", "type": "episode",
-   "question": "In which episode do Carrie and Aidan clash over his things taking over her apartment?",
-   "expected_answer": "S4E13",
-   "season": 4, "episode": 13}
+  {
+    "id": "smoke-01",
+    "question_type": "who_said",
+    "style": "paraphrase",
+    "question": "Who says that nobody has breakfast at Tiffany's any more, only breakfast at 7:00 a.m. and affairs we try to forget?",
+    "expected_answer": "Carrie (S1E1)",
+    "season": 1, "episode": 1, "source_row_start": 36, "source_row_end": 38,
+    "expected_quote": "we have breakfast at 7:00 a.m.",
+    "notes": "Plumbing check only (not a benchmark item). Single-target form."
+  },
+  {
+    "id": "smoke-02",
+    "question_type": "scene_fact",
+    "style": "paraphrase",
+    "question": "Where does Samantha say you should look if you want to see the face of breast cancer?",
+    "expected_answer": "Around you: the woman at the dry cleaners, the nurse in pediatrics, the single mother picking her child up from school (S6E19)",
+    "targets": [
+      {"season": 6, "episode": 19, "source_row_start": 258, "source_row_end": 261, "expected_quote": "look around you"},
+      {"season": 6, "episode": 19, "source_row_start": 368, "source_row_end": 371, "expected_quote": "look around you"}
+    ],
+    "requires_all_targets": false,
+    "notes": "Plumbing check only. Samantha says the same lines twice, so either passage answers (an ANY group)."
+  },
+  {
+    "id": "smoke-03",
+    "question_type": "sequence",
+    "style": "event",
+    "question": "When Samantha hears Carrie was asked to be in a charity fashion show, what does she ask, and how does Carrie answer?",
+    "expected_answer": "Whether they want her to be a model; Carrie says it's a mix of real people and models, and that she knows the producer (S4E2)",
+    "targets": [
+      {"season": 4, "episode": 2, "source_row_start": 60, "source_row_end": 64, "expected_quote": "They want you to be a model", "role": "anchor"},
+      {"season": 4, "episode": 2, "source_row_start": 65, "source_row_end": 66, "expected_quote": "a mix of real people and models", "role": "answer"}
+    ],
+    "requires_all_targets": true,
+    "evidence": [
+      {"season": 4, "episode": 2, "source_row_start": 59, "source_row_end": 59, "expected_quote": "some charity fashion show", "role": "premise"}
+    ],
+    "notes": "Plumbing check only. ALL group (anchor and answer) plus premise evidence."
+  },
+  {
+    "id": "smoke-04",
+    "question_type": "scene_fact",
+    "style": "lexical",
+    "question": "After saying that self-protection and closing the deal are paramount, what does Carrie say Cupid has done?",
+    "expected_answer": "Flown the co-op (S1E1)",
+    "season": 1, "episode": 1, "source_row_start": 39, "source_row_end": 40,
+    "expected_quote": "Cupid has flown the co-op",
+    "notes": "Plumbing check only. High lexical overlap on purpose."
+  },
+  {
+    "id": "smoke-05",
+    "question_type": "scene_fact",
+    "style": "multi_evidence",
+    "question": "What does Samantha's speech about breast cancer say, and what does Sheila tell her afterwards?",
+    "expected_answer": "That the face of breast cancer is all around you (the woman at the dry cleaners, the nurse, the single mother); Sheila says she asked for inspirational, not perspirational (S6E19)",
+    "required_groups": [
+      {"mode": "any", "targets": [
+        {"season": 6, "episode": 19, "source_row_start": 258, "source_row_end": 261, "expected_quote": "the face of breast cancer"},
+        {"season": 6, "episode": 19, "source_row_start": 368, "source_row_end": 371, "expected_quote": "the face of breast cancer"}
+      ]},
+      {"mode": "all", "targets": [
+        {"season": 6, "episode": 19, "source_row_start": 372, "source_row_end": 372, "expected_quote": "not perspirational"}
+      ]}
+    ],
+    "notes": "Plumbing check only. General required_groups form: one ANY group (either delivery of the speech) and one ALL group."
+  }
 ]

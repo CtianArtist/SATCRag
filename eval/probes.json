@@ -1,0 +1,79 @@
+[
+  {
+    "id": "ep-02",
+    "question_type": "episode",
+    "style": "metadata",
+    "question": "What is the main conflict of Season 2, Episode 1?",
+    "expected_answer": "Carrie trying to get over her breakup with Big: break-up rules, dating a new Yankee, dreading running into Big (S2E1)",
+    "targets": [
+      {
+        "season": 2,
+        "episode": 1,
+        "source_row_start": 0,
+        "source_row_end": 4,
+        "expected_quote": "bumping into the one who broke your heart"
+      },
+      {
+        "season": 2,
+        "episode": 1,
+        "source_row_start": 34,
+        "source_row_end": 34,
+        "expected_quote": "The chance of meeting Big"
+      },
+      {
+        "season": 2,
+        "episode": 1,
+        "source_row_start": 132,
+        "source_row_end": 132,
+        "expected_quote": "ask the new Yankee out"
+      },
+      {
+        "season": 2,
+        "episode": 1,
+        "source_row_start": 146,
+        "source_row_end": 148,
+        "expected_quote": "What are the break-up rules"
+      }
+    ],
+    "requires_all_targets": false,
+    "sampled_from": "frame S2E1",
+    "notes": "Metadata/routing probe: no content words. Excluded from the primary benchmark. Each target is one strand of the storyline, so any one counts.",
+    "status": "probe",
+    "revision": "audit v3: evidence r34 (Big) and r132 (the new Yankee) added; audit v4: episode-wide relevance replaced by scored answer spans; the four passages became scored targets"
+  },
+  {
+    "id": "ep-11",
+    "question_type": "episode",
+    "style": "metadata",
+    "question": "What is the main conflict of Season 6, Episode 10?",
+    "expected_answer": "Carrie reconnects with her high-school sweetheart Jeremy, who turns out to be living in a psychiatric facility; they break up (S6E10)",
+    "targets": [
+      {
+        "season": 6,
+        "episode": 10,
+        "source_row_start": 1,
+        "source_row_end": 4,
+        "expected_quote": "my high-school sweetheart called me"
+      },
+      {
+        "season": 6,
+        "episode": 10,
+        "source_row_start": 419,
+        "source_row_end": 419,
+        "expected_quote": "a full-on psychiatric facility"
+      },
+      {
+        "season": 6,
+        "episode": 10,
+        "source_row_start": 432,
+        "source_row_end": 436,
+        "expected_quote": "the sanest breakup I ever had"
+      }
+    ],
+    "requires_all_targets": false,
+    "sampled_from": "frame S6E10",
+    "notes": "Metadata/routing probe: no content words. Excluded from the primary benchmark. Each target is one strand of the storyline, so any one counts.",
+    "status": "probe",
+    "revision": "audit v3: r1 -> r1-4 (names Jeremy); r252-257 replaced by r419 and r432-436; audit v4: episode-wide relevance replaced by scored answer spans; the three passages became scored targets"
+  }
+]

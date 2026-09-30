@@ -1,0 +1,12 @@
+# Settings for the synthetic test project (invented dialogue, not the SATC corpus).
+[corpus]
+raw_csv_sha256 = "ea6518dd5ef0f2cd8dc99bb825d521981f39978787d5f35703627ccdfbaf7514"
+
+[chunking]
+size = 40
+overlap = 8
+configs = [[40, 8], [80, 16]]
+
+[evaluation]
+dev_size = 3
+split_candidates = 200

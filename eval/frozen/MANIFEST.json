@@ -1,0 +1,614 @@
+{
+  "benchmark_version": 1,
+  "frozen_on": "2026-09-30",
+  "approval": "project owner approved freezing the reviewed 60 once they all validate",
+  "source": {
+    "file": "eval/benchmark_proposed.json",
+    "sha256": "e1301309694e1db84f6dca48aad87d4fbbc5c9a47a682e0b5ee5df93271f7d0e"
+  },
+  "corpus": {
+    "raw_csv_sha256": "3572c0e7851600080bafb40ae691696983caa4946f5079e3093b19d23d734047",
+    "lines_jsonl_sha256": "5b26edce04feab849a53bc95d0773a2927bbb8ad7e936d9dd0b2abf2dac9c54c"
+  },
+  "files": {
+    "benchmark.json": {
+      "sha256": "ab6e191a8afb730e232f9d1090f34b90d9b8f57689a765ce3c6ac9f9ee6e1952",
+      "items": 60
+    },
+    "dev.json": {
+      "sha256": "078a9dcd4fa188338511019ef4870b0d1f7e7976c8589851555d1509708c50ad",
+      "items": 20
+    },
+    "test.json": {
+      "sha256": "32d8c8135b5402de091e89997fe68c38c48d17e655c88cb671cc468d126e81bb",
+      "items": 40
+    }
+  },
+  "split": {
+    "seed": 20261001,
+    "dev_size": 20,
+    "candidates": 20000,
+    "balanced_on": [
+      "style",
+      "seasons",
+      "targets",
+      "overlap"
+    ],
+    "imbalance": 5.666666667,
+    "dev_ids": [
+      "arc-01",
+      "arc-04",
+      "arc-09",
+      "arc-12",
+      "char-06",
+      "char-08",
+      "char-09",
+      "char-11",
+      "ep-03",
+      "ep-10",
+      "ep-12",
+      "fact-09",
+      "fact-10",
+      "fact-14",
+      "seq-01",
+      "seq-03",
+      "seq-07",
+      "who-07",
+      "who-12",
+      "who-13"
+    ],
+    "strata": {
+      "who-03": {
+        "question_type": "who_said",
+        "style": "paraphrase",
+        "seasons": [
+          2
+        ],
+        "targets": "single",
+        "overlap": "medium"
+      },
+      "who-04": {
+        "question_type": "who_said",
+        "style": "lexical",
+        "seasons": [
+          2
+        ],
+        "targets": "single",
+        "overlap": "medium"
+      },
+      "who-07": {
+        "question_type": "who_said",
+        "style": "paraphrase",
+        "seasons": [
+          3
+        ],
+        "targets": "single",
+        "overlap": "medium"
+      },
+      "who-08": {
+        "question_type": "who_said",
+        "style": "paraphrase",
+        "seasons": [
+          4
+        ],
+        "targets": "single",
+        "overlap": "medium"
+      },
+      "who-09": {
+        "question_type": "who_said",
+        "style": "paraphrase",
+        "seasons": [
+          4
+        ],
+        "targets": "single",
+        "overlap": "low"
+      },
+      "who-10": {
+        "question_type": "who_said",
+        "style": "paraphrase",
+        "seasons": [
+          5
+        ],
+        "targets": "single",
+        "overlap": "medium"
+      },
+      "who-11": {
+        "question_type": "who_said",
+        "style": "paraphrase",
+        "seasons": [
+          6
+        ],
+        "targets": "single",
+        "overlap": "medium"
+      },
+      "who-12": {
+        "question_type": "who_said",
+        "style": "lexical",
+        "seasons": [
+          6
+        ],
+        "targets": "single",
+        "overlap": "medium"
+      },
+      "who-13": {
+        "question_type": "who_said",
+        "style": "lexical",
+        "seasons": [
+          1
+        ],
+        "targets": "single",
+        "overlap": "medium"
+      },
+      "who-14": {
+        "question_type": "who_said",
+        "style": "lexical",
+        "seasons": [
+          1
+        ],
+        "targets": "single",
+        "overlap": "high"
+      },
+      "fact-01": {
+        "question_type": "scene_fact",
+        "style": "paraphrase",
+        "seasons": [
+          1
+        ],
+        "targets": "single",
+        "overlap": "medium"
+      },
+      "fact-04": {
+        "question_type": "scene_fact",
+        "style": "event",
+        "seasons": [
+          2
+        ],
+        "targets": "single",
+        "overlap": "low"
+      },
+      "fact-06": {
+        "question_type": "scene_fact",
+        "style": "paraphrase",
+        "seasons": [
+          3
+        ],
+        "targets": "single",
+        "overlap": "low"
+      },
+      "fact-07": {
+        "question_type": "scene_fact",
+        "style": "lexical",
+        "seasons": [
+          4
+        ],
+        "targets": "single",
+        "overlap": "medium"
+      },
+      "fact-09": {
+        "question_type": "scene_fact",
+        "style": "paraphrase",
+        "seasons": [
+          4
+        ],
+        "targets": "single",
+        "overlap": "low"
+      },
+      "fact-10": {
+        "question_type": "scene_fact",
+        "style": "paraphrase",
+        "seasons": [
+          5
+        ],
+        "targets": "single",
+        "overlap": "medium"
+      },
+      "fact-12": {
+        "question_type": "scene_fact",
+        "style": "paraphrase",
+        "seasons": [
+          6
+        ],
+        "targets": "single",
+        "overlap": "low"
+      },
+      "fact-14": {
+        "question_type": "scene_fact",
+        "style": "lexical",
+        "seasons": [
+          2
+        ],
+        "targets": "single",
+        "overlap": "medium"
+      },
+      "fact-16": {
+        "question_type": "scene_fact",
+        "style": "lexical",
+        "seasons": [
+          3
+        ],
+        "targets": "single",
+        "overlap": "medium"
+      },
+      "fact-20": {
+        "question_type": "scene_fact",
+        "style": "lexical",
+        "seasons": [
+          6
+        ],
+        "targets": "single",
+        "overlap": "medium"
+      },
+      "char-01": {
+        "question_type": "character",
+        "style": "relationship",
+        "seasons": [
+          1
+        ],
+        "targets": "single",
+        "overlap": "low"
+      },
+      "char-03": {
+        "question_type": "character",
+        "style": "relationship",
+        "seasons": [
+          2
+        ],
+        "targets": "single",
+        "overlap": "low"
+      },
+      "char-04": {
+        "question_type": "character",
+        "style": "relationship",
+        "seasons": [
+          2
+        ],
+        "targets": "single",
+        "overlap": "medium"
+      },
+      "char-05": {
+        "question_type": "character",
+        "style": "relationship",
+        "seasons": [
+          3
+        ],
+        "targets": "single",
+        "overlap": "low"
+      },
+      "char-06": {
+        "question_type": "character",
+        "style": "paraphrase",
+        "seasons": [
+          3
+        ],
+        "targets": "single",
+        "overlap": "low"
+      },
+      "char-07": {
+        "question_type": "character",
+        "style": "lexical",
+        "seasons": [
+          4
+        ],
+        "targets": "single",
+        "overlap": "low"
+      },
+      "char-08": {
+        "question_type": "character",
+        "style": "relationship",
+        "seasons": [
+          4
+        ],
+        "targets": "single",
+        "overlap": "medium"
+      },
+      "char-09": {
+        "question_type": "character",
+        "style": "paraphrase",
+        "seasons": [
+          5
+        ],
+        "targets": "multi",
+        "overlap": "low"
+      },
+      "char-11": {
+        "question_type": "character",
+        "style": "relationship",
+        "seasons": [
+          6
+        ],
+        "targets": "single",
+        "overlap": "low"
+      },
+      "char-12": {
+        "question_type": "character",
+        "style": "relationship",
+        "seasons": [
+          6
+        ],
+        "targets": "single",
+        "overlap": "medium"
+      },
+      "ep-01": {
+        "question_type": "episode",
+        "style": "paraphrase",
+        "seasons": [
+          1
+        ],
+        "targets": "single",
+        "overlap": "low"
+      },
+      "ep-03": {
+        "question_type": "episode",
+        "style": "paraphrase",
+        "seasons": [
+          2
+        ],
+        "targets": "multi",
+        "overlap": "low"
+      },
+      "ep-04": {
+        "question_type": "episode",
+        "style": "paraphrase",
+        "seasons": [
+          2
+        ],
+        "targets": "multi",
+        "overlap": "low"
+      },
+      "ep-05": {
+        "question_type": "episode",
+        "style": "paraphrase",
+        "seasons": [
+          3
+        ],
+        "targets": "multi",
+        "overlap": "low"
+      },
+      "ep-06": {
+        "question_type": "episode",
+        "style": "paraphrase",
+        "seasons": [
+          3
+        ],
+        "targets": "multi",
+        "overlap": "low"
+      },
+      "ep-07": {
+        "question_type": "episode",
+        "style": "paraphrase",
+        "seasons": [
+          4
+        ],
+        "targets": "multi",
+        "overlap": "medium"
+      },
+      "ep-08": {
+        "question_type": "episode",
+        "style": "paraphrase",
+        "seasons": [
+          4
+        ],
+        "targets": "multi",
+        "overlap": "low"
+      },
+      "ep-09": {
+        "question_type": "episode",
+        "style": "paraphrase",
+        "seasons": [
+          5
+        ],
+        "targets": "multi",
+        "overlap": "low"
+      },
+      "ep-10": {
+        "question_type": "episode",
+        "style": "paraphrase",
+        "seasons": [
+          6
+        ],
+        "targets": "single",
+        "overlap": "low"
+      },
+      "ep-12": {
+        "question_type": "episode",
+        "style": "paraphrase",
+        "seasons": [
+          6
+        ],
+        "targets": "multi",
+        "overlap": "low"
+      },
+      "seq-01": {
+        "question_type": "sequence",
+        "style": "event",
+        "seasons": [
+          1
+        ],
+        "targets": "multi",
+        "overlap": "medium"
+      },
+      "seq-02": {
+        "question_type": "sequence",
+        "style": "event",
+        "seasons": [
+          2
+        ],
+        "targets": "multi",
+        "overlap": "medium"
+      },
+      "seq-03": {
+        "question_type": "sequence",
+        "style": "event",
+        "seasons": [
+          2
+        ],
+        "targets": "multi",
+        "overlap": "low"
+      },
+      "seq-04": {
+        "question_type": "sequence",
+        "style": "event",
+        "seasons": [
+          3
+        ],
+        "targets": "multi",
+        "overlap": "medium"
+      },
+      "seq-05": {
+        "question_type": "sequence",
+        "style": "relationship",
+        "seasons": [
+          3
+        ],
+        "targets": "multi",
+        "overlap": "low"
+      },
+      "seq-07": {
+        "question_type": "sequence",
+        "style": "event",
+        "seasons": [
+          4
+        ],
+        "targets": "multi",
+        "overlap": "medium"
+      },
+      "seq-08": {
+        "question_type": "sequence",
+        "style": "event",
+        "seasons": [
+          4
+        ],
+        "targets": "multi",
+        "overlap": "low"
+      },
+      "seq-09": {
+        "question_type": "sequence",
+        "style": "event",
+        "seasons": [
+          5
+        ],
+        "targets": "multi",
+        "overlap": "medium"
+      },
+      "seq-10": {
+        "question_type": "sequence",
+        "style": "event",
+        "seasons": [
+          6
+        ],
+        "targets": "multi",
+        "overlap": "medium"
+      },
+      "seq-11": {
+        "question_type": "sequence",
+        "style": "event",
+        "seasons": [
+          6
+        ],
+        "targets": "multi",
+        "overlap": "medium"
+      },
+      "arc-01": {
+        "question_type": "arc",
+        "style": "multi_evidence",
+        "seasons": [
+          3,
+          4
+        ],
+        "targets": "multi",
+        "overlap": "medium"
+      },
+      "arc-02": {
+        "question_type": "arc",
+        "style": "multi_evidence",
+        "seasons": [
+          4,
+          6
+        ],
+        "targets": "multi",
+        "overlap": "low"
+      },
+      "arc-03": {
+        "question_type": "arc",
+        "style": "multi_evidence",
+        "seasons": [
+          6
+        ],
+        "targets": "multi",
+        "overlap": "medium"
+      },
+      "arc-04": {
+        "question_type": "arc",
+        "style": "multi_evidence",
+        "seasons": [
+          3
+        ],
+        "targets": "multi",
+        "overlap": "low"
+      },
+      "arc-05": {
+        "question_type": "arc",
+        "style": "multi_evidence",
+        "seasons": [
+          4,
+          5,
+          6
+        ],
+        "targets": "multi",
+        "overlap": "low"
+      },
+      "arc-06": {
+        "question_type": "arc",
+        "style": "multi_evidence",
+        "seasons": [
+          4,
+          6
+        ],
+        "targets": "multi",
+        "overlap": "low"
+      },
+      "arc-07": {
+        "question_type": "arc",
+        "style": "multi_evidence",
+        "seasons": [
+          4,
+          5
+        ],
+        "targets": "multi",
+        "overlap": "low"
+      },
+      "arc-08": {
+        "question_type": "arc",
+        "style": "multi_evidence",
+        "seasons": [
+          6
+        ],
+        "targets": "multi",
+        "overlap": "low"
+      },
+      "arc-09": {
+        "question_type": "arc",
+        "style": "multi_evidence",
+        "seasons": [
+          5,
+          6
+        ],
+        "targets": "multi",
+        "overlap": "low"
+      },
+      "arc-12": {
+        "question_type": "arc",
+        "style": "multi_evidence",
+        "seasons": [
+          4
+        ],
+        "targets": "multi",
+        "overlap": "medium"
+      }
+    }
+  },
+  "use": {
+    "dev.json": "failure analysis, tuning, reranker selection, RRF and BM25 changes",
+    "test.json": "held out: never used for tuning; run once the retrieval approach is final"
+  }
+}

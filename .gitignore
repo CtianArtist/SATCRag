@@ -1,27 +1,72 @@
-# Local environments and tool caches
+# Local environments (rebuilt with `pip install -e ".[dev]"`) and secrets
 .venv/
 .venv-*/
-__pycache__/
-.pytest_cache/
+venv/
 .env
+.env.*
+kaggle.json
+*.pem
+*.key
 
-# The SATC transcript corpus is not redistributed: download_data.py fetches it into data/raw/
-data/raw/
+# Build output
+build/
+dist/
 
-# Derived copies of the corpus text (lines, chunks, scenes, parse report) are rebuilt locally.
-# Chunk-set manifests hold only settings and hashes, so they are kept: after rebuilding,
-# `git diff` on them shows whether the pipeline reproduced byte-identical chunks.
-data/processed/*
-!data/processed/chunks/
-data/processed/chunks/*
-!data/processed/chunks/*.manifest.json
+# Experiment outputs stay local; publish a run deliberately (see results/README.md)
+/results/runs/
+/results/reports/*
+/results/figures/*
+!/results/reports/.gitkeep
+!/results/figures/.gitkeep
 
-# Embedding caches (rebuilt with `python -m src.index --all`) and model files
-index/
+# Python, test and linter caches
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+.coverage.*
+htmlcov/
+.ipynb_checkpoints/
+*.egg-info/
+
+# Editor, OS and temporary files
+.DS_Store
+*.swp
+*~
+*.tmp
+*.bak
+*.log
+
+# The SATC transcript corpus is not redistributed: `sexandrag download` fetches it into data/raw/
+/data/raw/
+
+# Only project-created metadata (data/meta/) and chunk-set manifests are tracked under data/;
+# anything else placed there (stray files, downloads) stays local.
+/data/*
+!/data/meta/
+!/data/processed/
+
+# Derived copies of the corpus text (lines, chunks, scenes, parse report, review sheets) are
+# rebuilt locally. Chunk-set manifests hold only settings and hashes, so they are kept: after
+# rebuilding, `git diff` on them shows whether the pipeline reproduced byte-identical chunks.
+/data/processed/*
+!/data/processed/chunks/
+/data/processed/chunks/*
+!/data/processed/chunks/*.manifest.json
+
+# Embedding caches (rebuilt with `sexandrag index --all`) and model files, never committed
+/index/
 *.safetensors
 *.bin
 *.onnx
 *.onnx_data
+*.pt
+*.pth
+*.ckpt
+*.npy
+*.npz
 
 # Temporary Hugging Face / download files, should a cache ever point inside the repo
 .cache/

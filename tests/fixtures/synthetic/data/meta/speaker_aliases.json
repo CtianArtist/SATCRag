@@ -1,0 +1,20 @@
+{
+  "_about": "Synthetic aliases for the integration tests.",
+  "global": [
+    {
+      "from": "Mr. Price",
+      "to": "Samuel Price",
+      "reason": "Formal name of the dog walker."
+    }
+  ],
+  "episode_scoped": [
+    {
+      "from": "Sam",
+      "to": "Samuel Price",
+      "episodes": [
+        "S1E2"
+      ],
+      "reason": "Sam is the dog walker only in S1E2."
+    }
+  ]
+}

@@ -1,0 +1,61 @@
+name: CI
+
+on:
+  push:
+  pull_request:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  checks:
+    name: checks (Python ${{ matrix.python-version }})
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    strategy:
+      fail-fast: false
+      matrix:
+        python-version: ["3.12", "3.14"]
+    env:
+      # CI never downloads the embedding model or the corpus: tests use a synthetic fixture corpus
+      # and a fake embedder, and the real-model / corpus tests skip themselves.
+      HF_HUB_OFFLINE: "1"
+      PIP_DISABLE_PIP_VERSION_CHECK: "1"
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python-version }}
+          cache: pip
+          cache-dependency-path: |
+            pyproject.toml
+            constraints.txt
+
+      - name: Install CPU-only PyTorch (never the CUDA build)
+        run: python -m pip install torch==2.14.0 --index-url https://download.pytorch.org/whl/cpu
+
+      - name: Install the package and dev tools at the tested versions
+        run: python -m pip install -e ".[dev]" -c constraints.txt
+
+      - name: Formatting
+        run: ruff format --check .
+
+      - name: Lint
+        run: ruff check .
+
+      - name: Type check (mypy strict)
+        run: mypy
+
+      - name: Unit and integration tests
+        run: python -m pytest -p no:cacheprovider --cov --cov-report=term-missing
+
+      - name: Frozen benchmark hashes and split
+        run: sexandrag verify --only benchmark
+
+      - name: Repository hygiene
+        run: python scripts/check_repo_hygiene.py

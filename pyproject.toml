@@ -1,0 +1,132 @@
+[build-system]
+requires = ["setuptools>=77", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "sexandrag"
+version = "0.1.0"
+description = "Retrieval benchmark (BM25, dense and hybrid) over noisy TV-dialogue subtitles, scored against row-level evidence"
+readme = "README.md"
+requires-python = ">=3.12"
+authors = [{ name = "Ctian" }]
+keywords = ["retrieval", "rag", "bm25", "dense-retrieval", "reciprocal-rank-fusion", "evaluation"]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Programming Language :: Python :: 3.14",
+    "Operating System :: POSIX :: Linux",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+    "Typing :: Typed",
+]
+# Exact pins: these libraries can change embeddings, tokenization or rankings, and every index
+# and run records their versions. Install CPU-only torch first (see the README) so pip never
+# pulls the multi-GB CUDA build.
+dependencies = [
+    "numpy==2.5.3",
+    "rank-bm25==0.2.2",
+    "huggingface_hub==1.33.0",
+    "tokenizers==0.23.2",
+    "transformers==5.17.0",
+    "sentence-transformers==6.1.0",
+    "torch==2.14.0",
+]
+
+[project.optional-dependencies]
+download = ["kagglehub==1.0.2"]
+dev = [
+    "pytest==9.1.1",
+    "pytest-cov==7.1.0",
+    "ruff==0.16.9",
+    "mypy==2.3.1",
+]
+
+[project.scripts]
+sexandrag = "sexandrag.cli:run"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+sexandrag = ["py.typed"]
+
+# ------------------------------------------------------------------------------ Ruff
+[tool.ruff]
+line-length = 120
+target-version = "py312"
+extend-exclude = ["eval/drafts"]
+
+[tool.ruff.lint]
+select = [
+    "E", "W",   # pycodestyle
+    "F",        # pyflakes
+    "I",        # import order
+    "B",        # bugbear
+    "UP",       # pyupgrade (py312)
+    "SIM",      # simplifications
+    "C4",       # comprehensions
+    "PIE", "RET", "RUF",
+    "N",        # naming
+    "PT",       # pytest style
+    "PTH",      # pathlib over os.path
+    "S",        # bandit security checks
+    "T20",      # no print() outside the CLI
+    "D1",       # every public module, class and function has a docstring
+]
+ignore = [
+    "D105", "D107",   # magic methods and __init__ are documented by their class
+]
+
+[tool.ruff.lint.per-file-ignores]
+# The CLI writes command results to stdout on purpose; everything else logs.
+"src/sexandrag/cli.py" = ["T201"]
+"scripts/*" = ["T201", "S603", "S607"]
+# Tests: asserts are the point; fixtures and helpers need no docstrings; seeded `random` drives
+# property-style inputs (not cryptography).
+"tests/**" = ["S101", "D1", "S311", "S603", "S607"]
+# The typography tests feed curly quotes and dashes on purpose.
+"tests/unit/test_clean.py" = ["RUF001"]
+"eval/*.py" = ["D1"]
+
+[tool.ruff.lint.isort]
+known-first-party = ["sexandrag", "tests"]
+
+# ------------------------------------------------------------------------------ mypy
+[tool.mypy]
+python_version = "3.12"
+files = ["src", "tests", "scripts", "eval"]
+strict = true
+warn_unreachable = true
+
+[[tool.mypy.overrides]]
+# rank_bm25 and kagglehub ship without type information.
+module = ["rank_bm25", "rank_bm25.*", "kagglehub", "kagglehub.*"]
+ignore_missing_imports = true
+
+[[tool.mypy.overrides]]
+# Test functions, fixtures and small test helpers are not annotated (pytest injects fixtures); their
+# bodies are still type-checked. Library code and scripts stay fully strict.
+module = ["tests.*"]
+disallow_untyped_defs = false
+disallow_incomplete_defs = false
+disallow_untyped_calls = false
+check_untyped_defs = true
+
+# ------------------------------------------------------------------------------ pytest and coverage
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = ["-ra", "--strict-markers", "--strict-config"]
+markers = [
+    "model: needs the real 2.3 GB BGE-M3 model (skipped unless run with --run-model or RUN_MODEL_TESTS=1)",
+    "corpus: needs the local SATC corpus and its processed artifacts (skipped when absent)",
+]
+filterwarnings = ["error::DeprecationWarning:sexandrag.*"]
+
+[tool.coverage.run]
+source = ["sexandrag"]
+branch = true
+
+[tool.coverage.report]
+show_missing = true
+skip_covered = false
+exclude_also = ["if __name__ == .__main__.:", "raise NotImplementedError"]

@@ -1,0 +1,1610 @@
+[
+  {
+    "id": "who-01",
+    "question_type": "who_said",
+    "style": "paraphrase",
+    "question": "Which of Carrie's friends claims that the only place left in New York to find love and romance is the gay community, and in which episode?",
+    "expected_answer": "Stanford Blatch (S1E1)",
+    "season": 1,
+    "episode": 1,
+    "source_row_start": 117,
+    "source_row_end": 118,
+    "expected_quote": "It's straight love that's become closeted",
+    "sampled_from": "frame S1E1@r95",
+    "notes": "",
+    "status": "candidate"
+  },
+  {
+    "id": "who-02",
+    "question_type": "who_said",
+    "style": "paraphrase",
+    "question": "Who offers to join Samantha and her husband in bed if that is what it takes to keep her marriage together?",
+    "expected_answer": "Ruth, the wife of the man Samantha slept with (S1E8)",
+    "season": 1,
+    "episode": 8,
+    "source_row_start": 316,
+    "source_row_end": 322,
+    "expected_quote": "I am prepared to join you with him in bed",
+    "sampled_from": "frame S1E8@r316",
+    "notes": "Minor character.",
+    "status": "candidate"
+  },
+  {
+    "id": "who-03",
+    "question_type": "who_said",
+    "style": "paraphrase",
+    "question": "Which man tells Carrie he has stopped dating because women always turn out to be freaks, and then invites her to dinner anyway?",
+    "expected_answer": "Ben (S2E3); he calls it a 'non-date'",
+    "season": 2,
+    "episode": 3,
+    "source_row_start": 150,
+    "source_row_end": 166,
+    "expected_quote": "It would be a non-date",
+    "sampled_from": "frame S2E3@r163",
+    "notes": "Carrie's narration at r181 adds that Ben edits a political magazine (outside the span).",
+    "status": "candidate"
+  },
+  {
+    "id": "who-04",
+    "question_type": "who_said",
+    "style": "lexical",
+    "question": "Which of the four friends calls a single father who likes stability and routine 'the Heterosexual Holy Grail', and in which episode?",
+    "expected_answer": "Miranda, about Roger Cobb (S2E15)",
+    "season": 2,
+    "episode": 15,
+    "source_row_start": 164,
+    "source_row_end": 170,
+    "expected_quote": "You're the Heterosexual Holy Grail",
+    "sampled_from": "frame S2E15@r133",
+    "notes": "Quoted phrase is distinctive: expected to favour BM25.",
+    "status": "candidate"
+  },
+  {
+    "id": "who-05",
+    "question_type": "who_said",
+    "style": "lexical",
+    "question": "At a political fundraiser, who declares that a man shorter than five feet is unacceptable?",
+    "expected_answer": "Charlotte (S3E2)",
+    "season": 3,
+    "episode": 2,
+    "source_row_start": 166,
+    "source_row_end": 175,
+    "expected_quote": "Less than five feet is unacceptable",
+    "sampled_from": "frame S3E2@r139",
+    "notes": "",
+    "status": "candidate"
+  },
+  {
+    "id": "who-06",
+    "question_type": "who_said",
+    "style": "lexical",
+    "question": "When Samantha boasts that the four of them 'have it all', who answers that having it all really means having someone special to share it with?",
+    "expected_answer": "Charlotte (S3E10), who adds that her life wasn't complete until she met Trey",
+    "season": 3,
+    "episode": 10,
+    "source_row_start": 34,
+    "source_row_end": 43,
+    "expected_quote": "Having it all really means having someone special to share it with",
+    "sampled_from": "frame S3E10@r22",
+    "notes": "High word overlap with the target line.",
+    "status": "candidate"
+  },
+  {
+    "id": "who-07",
+    "question_type": "who_said",
+    "style": "paraphrase",
+    "question": "Who shares Samantha's name and jokes that getting all his calls explains why he is still a virgin?",
+    "expected_answer": "Sam Jones, a young man with the same name as Samantha (S3E17)",
+    "season": 3,
+    "episode": 17,
+    "source_row_start": 186,
+    "source_row_end": 196,
+    "expected_quote": "that explains why I'm still a virgin",
+    "sampled_from": "frame S3E17@r186",
+    "notes": "Also checks that the label 'Sam Jones' was not normalized to Samantha.",
+    "status": "candidate"
+  },
+  {
+    "id": "who-08",
+    "question_type": "who_said",
+    "style": "paraphrase",
+    "question": "Who tells Carrie that Miranda has to stay off work and running for a week and wear a foam collar?",
+    "expected_answer": "Aidan, who took Miranda to the chiropractor (S4E7)",
+    "season": 4,
+    "episode": 7,
+    "source_row_start": 270,
+    "source_row_end": 277,
+    "expected_quote": "she has to wear one of those foam collars",
+    "sampled_from": "frame S4E7@r262",
+    "notes": "",
+    "status": "candidate"
+  },
+  {
+    "id": "who-09",
+    "question_type": "who_said",
+    "style": "paraphrase",
+    "question": "When Carrie complains about the apartments she is being shown, who tells her that with her attitude and budget she should look outside Manhattan?",
+    "expected_answer": "Delia, the real-estate broker, who suggests Weehawken (S4E16)",
+    "season": 4,
+    "episode": 16,
+    "source_row_start": 125,
+    "source_row_end": 133,
+    "expected_quote": "I think you should consider Weehawken",
+    "sampled_from": "frame S4E16@r96",
+    "notes": "The rare answer term 'Weehawken' appears only in the target, not the question.",
+    "status": "candidate"
+  },
+  {
+    "id": "who-10",
+    "question_type": "who_said",
+    "style": "paraphrase",
+    "question": "Which fellow parent lends Miranda a vibrating baby chair and tells her that friends without kids don't have a clue?",
+    "expected_answer": "Kendall (S5E6)",
+    "season": 5,
+    "episode": 6,
+    "source_row_start": 187,
+    "source_row_end": 198,
+    "expected_quote": "If they don't have kids, they don't have a clue",
+    "sampled_from": "frame S5E6@r171",
+    "notes": "",
+    "status": "candidate"
+  },
+  {
+    "id": "who-11",
+    "question_type": "who_said",
+    "style": "paraphrase",
+    "question": "Which friend takes Charlotte man-spotting in Central Park two weeks after she and Harry break up?",
+    "expected_answer": "Anthony (S6E5)",
+    "season": 6,
+    "episode": 5,
+    "source_row_start": 197,
+    "source_row_end": 211,
+    "expected_quote": "knocking on sad-gal door",
+    "sampled_from": "frame S6E5@r188",
+    "notes": "",
+    "status": "candidate"
+  },
+  {
+    "id": "who-12",
+    "question_type": "who_said",
+    "style": "lexical",
+    "question": "At a club, who teases Samantha by asking how long she has been 'babysitting' when he sees her with Smith?",
+    "expected_answer": "Richard, Samantha's ex (S6E13)",
+    "season": 6,
+    "episode": 13,
+    "source_row_start": 411,
+    "source_row_end": 421,
+    "expected_quote": "how long have you been babysitting",
+    "sampled_from": "frame S6E13@r385",
+    "notes": "",
+    "status": "candidate"
+  },
+  {
+    "id": "fact-01",
+    "question_type": "scene_fact",
+    "style": "paraphrase",
+    "question": "What dish made the young chef Samantha introduces at a party so famous that he didn't need a last name?",
+    "expected_answer": "His blue crab strudel (chef Jon, S1E4)",
+    "season": 1,
+    "episode": 4,
+    "source_row_start": 45,
+    "source_row_end": 49,
+    "expected_quote": "His blue crab strudel was so fabulous",
+    "sampled_from": "frame S1E4@r34",
+    "notes": "Answer term appears only in the target.",
+    "status": "candidate"
+  },
+  {
+    "id": "fact-02",
+    "question_type": "scene_fact",
+    "style": "paraphrase",
+    "question": "What does Samantha's yoga instructor reveal about his sex life when she makes a pass at him?",
+    "expected_answer": "He practises Tantric celibacy and gave up sex three years ago (S1E11)",
+    "season": 1,
+    "episode": 11,
+    "source_row_start": 145,
+    "source_row_end": 160,
+    "expected_quote": "I gave up sex three years ago",
+    "sampled_from": "frame S1E11@r129",
+    "notes": "",
+    "status": "candidate"
+  },
+  {
+    "id": "fact-03",
+    "question_type": "scene_fact",
+    "style": "paraphrase",
+    "question": "What reasons does Charlotte give for spending so much time with Lydia and her friends?",
+    "expected_answer": "They're cool, they buy art, and their lives aren't complicated by men (her new lesbian friends, S2E6)",
+    "season": 2,
+    "episode": 6,
+    "source_row_start": 262,
+    "source_row_end": 272,
+    "expected_quote": "their lives aren't complicated by men",
+    "sampled_from": "frame S2E6@r244",
+    "notes": "",
+    "status": "candidate"
+  },
+  {
+    "id": "fact-04",
+    "question_type": "scene_fact",
+    "style": "paraphrase",
+    "question": "How does Carrie get hurt while walking home one night, and who is responsible?",
+    "expected_answer": "Patrick Casey flicks away his cigarette and it hits her; she thinks she has been stung by a bee (S2E16)",
+    "season": 2,
+    "episode": 16,
+    "source_row_start": 70,
+    "source_row_end": 81,
+    "expected_quote": "I just threw my cigarette",
+    "sampled_from": "frame S2E16@r46",
+    "notes": "",
+    "status": "candidate"
+  },
+  {
+    "id": "fact-05",
+    "question_type": "scene_fact",
+    "style": "paraphrase",
+    "question": "Why won't Charlotte take off her towel in the spa's steam room?",
+    "expected_answer": "She isn't comfortable being naked in public ('I didn't grow up in a naked house') and worries about her thighs (S3E3)",
+    "season": 3,
+    "episode": 3,
+    "source_row_start": 203,
+    "source_row_end": 222,
+    "expected_quote": "I didn't grow up in a naked house",
+    "sampled_from": "frame S3E3@r200",
+    "notes": "",
+    "status": "candidate"
+  },
+  {
+    "id": "fact-06",
+    "question_type": "scene_fact",
+    "style": "paraphrase",
+    "question": "What are the only things Carrie realises she knows about Big's wife?",
+    "expected_answer": "That Natasha likes tea roses and collects antique sugar bowls (S3E11)",
+    "season": 3,
+    "episode": 11,
+    "source_row_start": 437,
+    "source_row_end": 440,
+    "expected_quote": "Natasha collects antique sugar bowls",
+    "sampled_from": "frame S3E11@r413",
+    "notes": "Question says 'Big's wife' rather than naming Natasha.",
+    "status": "candidate"
+  },
+  {
+    "id": "fact-07",
+    "question_type": "scene_fact",
+    "style": "lexical",
+    "question": "According to two gossiping guests at a cocktail party, why was a radiologist and his wife turned down for three Park Avenue co-ops?",
+    "expected_answer": "Because of their yippy dog, an over-bred Pekingese (S4E3)",
+    "season": 4,
+    "episode": 3,
+    "source_row_start": 29,
+    "source_row_end": 32,
+    "expected_quote": "passed over for three Park Avenue co-ops because of that yippie dog",
+    "sampled_from": "frame S4E3@r6",
+    "notes": "Minor characters, uncommon terms.",
+    "status": "candidate"
+  },
+  {
+    "id": "fact-08",
+    "question_type": "scene_fact",
+    "style": "lexical",
+    "question": "What event did Trey and Charlotte promise his mother they would attend in Connecticut, clashing with Charlotte's plan to stay home and try to conceive?",
+    "expected_answer": "His mother's orchid show (S4E9)",
+    "season": 4,
+    "episode": 9,
+    "source_row_start": 33,
+    "source_row_end": 41,
+    "expected_quote": "We miss the orchid show, she'll be devastated",
+    "sampled_from": "frame S4E9@r10",
+    "notes": "",
+    "status": "candidate"
+  },
+  {
+    "id": "fact-09",
+    "question_type": "scene_fact",
+    "style": "paraphrase",
+    "question": "What gift do Carrie and Samantha bring to Miranda's baby shower, and what does Carrie wish they had bought instead?",
+    "expected_answer": "A four-tiered cake made entirely of diapers (ordered online); she wishes they had bought the massage certificate (S4E17)",
+    "season": 4,
+    "episode": 17,
+    "source_row_start": 216,
+    "source_row_end": 226,
+    "expected_quote": "It's a four tiered baby cake made entirely of diapers",
+    "sampled_from": "frame S4E17@r210",
+    "notes": "",
+    "status": "candidate"
+  },
+  {
+    "id": "fact-10",
+    "question_type": "scene_fact",
+    "style": "paraphrase",
+    "question": "Why does Carrie choose to take the train to San Francisco instead of flying?",
+    "expected_answer": "Flying makes her nervous (she hates watching the National Guard go through her makeup case), and a train trip with Samantha sounds fun (S5E7)",
+    "season": 5,
+    "episode": 7,
+    "source_row_start": 26,
+    "source_row_end": 29,
+    "expected_quote": "flying makes me nervous",
+    "sampled_from": "frame S5E7@r26",
+    "notes": "",
+    "status": "candidate"
+  },
+  {
+    "id": "fact-11",
+    "question_type": "scene_fact",
+    "style": "paraphrase",
+    "question": "What private joke does Carrie say she and Berger use when they are annoyed with each other?",
+    "expected_answer": "A fake 'Hollywood kiss' routine that makes them laugh (S6E6)",
+    "season": 6,
+    "episode": 6,
+    "source_row_start": 394,
+    "source_row_end": 402,
+    "expected_quote": "we did this fake Hollywood kiss bit",
+    "sampled_from": "frame S6E6@r362",
+    "notes": "",
+    "status": "candidate"
+  },
+  {
+    "id": "fact-12",
+    "question_type": "scene_fact",
+    "style": "paraphrase",
+    "question": "What comment from her doctor makes Samantha storm out of her follow-up appointment?",
+    "expected_answer": "That women who haven't had children may have a higher chance of getting breast cancer, a 'lifestyle choice' (S6E15)",
+    "season": 6,
+    "episode": 15,
+    "source_row_start": 45,
+    "source_row_end": 58,
+    "expected_quote": "women who haven't had children",
+    "sampled_from": "frame S6E15@r23",
+    "notes": "",
+    "status": "candidate"
+  },
+  {
+    "id": "char-01",
+    "question_type": "character",
+    "style": "relationship",
+    "question": "What worries Charlotte about the reclusive painter who invites her to his farm upstate?",
+    "expected_answer": "That he may expect sex in return for letting her gallery show his work (Neville Morgan, S1E5)",
+    "season": 1,
+    "episode": 5,
+    "source_row_start": 87,
+    "source_row_end": 94,
+    "expected_quote": "But what if he wants me to, you know",
+    "sampled_from": "frame S1E5@r69",
+    "notes": "",
+    "status": "candidate"
+  },
+  {
+    "id": "char-02",
+    "question_type": "character",
+    "style": "paraphrase",
+    "question": "What does Miranda think of organised religion when she goes with Carrie to spy on Big and his mother at church?",
+    "expected_answer": "That all religions are the same and designed to ruin their sex lives (S1E12)",
+    "season": 1,
+    "episode": 12,
+    "source_row_start": 243,
+    "source_row_end": 246,
+    "expected_quote": "all designed to fuck up our sex lives",
+    "sampled_from": "frame S1E12@r223",
+    "notes": "",
+    "status": "candidate"
+  },
+  {
+    "id": "char-03",
+    "question_type": "character",
+    "style": "relationship",
+    "question": "How does Miranda react when Charlotte tells a story about a married man who divorced his wife to marry a friend of a friend?",
+    "expected_answer": "She dismisses it as an 'urban relationship myth' that never happened (S2E8)",
+    "season": 2,
+    "episode": 8,
+    "source_row_start": 57,
+    "source_row_end": 63,
+    "expected_quote": "Urban relationship myth",
+    "sampled_from": "frame S2E8@r23",
+    "notes": "",
+    "status": "candidate"
+  },
+  {
+    "id": "char-04",
+    "question_type": "character",
+    "style": "relationship",
+    "question": "Why does Charlotte insist that the four friends share a summer house in the Hamptons?",
+    "expected_answer": "It could be their last summer together before one of them marries or has kids (S2E17)",
+    "season": 2,
+    "episode": 17,
+    "source_row_start": 26,
+    "source_row_end": 33,
+    "expected_quote": "This could be the Last summer we can actually all get together",
+    "sampled_from": "frame S2E17@r20",
+    "notes": "",
+    "status": "candidate"
+  },
+  {
+    "id": "char-05",
+    "question_type": "character",
+    "style": "relationship",
+    "question": "When Carrie keeps asking whether he prefers men or women, what does the bisexual man she is dating tell her?",
+    "expected_answer": "Sean tells her to stop making it all about sex: it's about the person, and he's crazy about her (S3E4)",
+    "season": 3,
+    "episode": 4,
+    "source_row_start": 228,
+    "source_row_end": 239,
+    "expected_quote": "Could you stop making this all about sex",
+    "sampled_from": "frame S3E4@r211",
+    "notes": "The speaker label 'Sean' is also used for a different man in S1E3.",
+    "status": "candidate"
+  },
+  {
+    "id": "char-06",
+    "question_type": "character",
+    "style": "paraphrase",
+    "question": "Why does the Hollywood producer Debbie believe Carrie's columns would make a successful movie?",
+    "expected_answer": "She identifies with Carrie: if she has had her heart broken, so have other women, which means a big 'chick flick' opening weekend (S3E13)",
+    "season": 3,
+    "episode": 13,
+    "source_row_start": 145,
+    "source_row_end": 152,
+    "expected_quote": "that means big opening weekend",
+    "sampled_from": "frame S3E13@r140",
+    "notes": "",
+    "status": "candidate"
+  },
+  {
+    "id": "char-07",
+    "question_type": "character",
+    "style": "lexical",
+    "question": "Why does Miranda announce that she is 'on strike', and how does Samantha describe it?",
+    "expected_answer": "She won't have sex until conditions improve because she's tired of bad dates; Samantha calls it a slump (S4E4)",
+    "season": 4,
+    "episode": 4,
+    "source_row_start": 44,
+    "source_row_end": 53,
+    "expected_quote": "I've made the conscious decision not to have sex until conditions improve",
+    "sampled_from": "frame S4E4@r22",
+    "notes": "",
+    "status": "candidate"
+  },
+  {
+    "id": "char-08",
+    "question_type": "character",
+    "style": "relationship",
+    "question": "How does Trey react when Charlotte brings up her doctor's suggestion over dinner?",
+    "expected_answer": "He gets angry that she assumes the problem is him after only three months, and leaves the table (S4E10)",
+    "season": 4,
+    "episode": 10,
+    "source_row_start": 48,
+    "source_row_end": 57,
+    "expected_quote": "Why would you just leap to the conclusion that the problem is me",
+    "sampled_from": "frame S4E10@r42",
+    "notes": "The question avoids the word 'sperm' used in the target.",
+    "status": "candidate"
+  },
+  {
+    "id": "char-09",
+    "question_type": "character",
+    "style": "paraphrase",
+    "question": "Why does Carrie conclude that her love life is over when the friends discuss a magazine theory at lunch?",
+    "expected_answer": "Charlotte says everyone only gets two great loves, and Carrie counts Aidan and Big as her two (S5E1)",
+    "season": 5,
+    "episode": 1,
+    "source_row_start": 48,
+    "source_row_end": 81,
+    "expected_quote": "Everyone knows you only get two great loves",
+    "sampled_from": "frame S5E1@r68",
+    "notes": "Long span (34 rows): the claim and Carrie's count are 25 rows apart.",
+    "status": "candidate"
+  },
+  {
+    "id": "char-10",
+    "question_type": "character",
+    "style": "paraphrase",
+    "question": "When Carrie unexpectedly runs into Aidan, what has changed in his life?",
+    "expected_answer": "He has a baby son, Tate ('Tater'), and has married another furniture designer, Cathy (S6E1)",
+    "season": 6,
+    "episode": 1,
+    "source_row_start": 424,
+    "source_row_end": 447,
+    "expected_quote": "I married another furniture designer",
+    "sampled_from": "frame S6E1@r413",
+    "notes": "",
+    "status": "candidate"
+  },
+  {
+    "id": "char-11",
+    "question_type": "character",
+    "style": "relationship",
+    "question": "When Robert drops by to check on Miranda, how does he respond to the soap opera she is embarrassed to be watching?",
+    "expected_answer": "He asks what it's about, says he's intrigued (his cable isn't hooked up yet) and watches with her (Jules & Mimi, S6E9)",
+    "season": 6,
+    "episode": 9,
+    "source_row_start": 432,
+    "source_row_end": 462,
+    "expected_quote": "I'm intrigued",
+    "sampled_from": "frame S6E9@r430",
+    "notes": "",
+    "status": "candidate"
+  },
+  {
+    "id": "char-12",
+    "question_type": "character",
+    "style": "relationship",
+    "question": "When Samantha starts losing her hair during chemotherapy, what does she ask Carrie to let her do?",
+    "expected_answer": "Talk about what she is afraid of (that the cancer could come back) instead of being reassured; Carrie listens (S6E16)",
+    "season": 6,
+    "episode": 16,
+    "source_row_start": 343,
+    "source_row_end": 361,
+    "expected_quote": "Let me talk about what I'm afraid of",
+    "sampled_from": "frame S6E16@r335",
+    "notes": "",
+    "status": "candidate"
+  },
+  {
+    "id": "ep-01",
+    "question_type": "episode",
+    "style": "paraphrase",
+    "question": "In the episode where Carrie's photo goes up on the side of a bus, why does she start to believe Big is ashamed of her?",
+    "expected_answer": "He takes her to Fung Wa, the kind of restaurant where men take women they don't want to be seen with; she confronts him (S1E6)",
+    "season": 1,
+    "episode": 6,
+    "evidence": [
+      {
+        "season": 1,
+        "episode": 6,
+        "source_row_start": 271,
+        "source_row_end": 274,
+        "expected_quote": "the kind of place men take women they don't want to be seen with in public"
+      },
+      {
+        "season": 1,
+        "episode": 6,
+        "source_row_start": 342,
+        "source_row_end": 350,
+        "expected_quote": "You bring me back to that restaurant where men take women they don't want to be seen with"
+      }
+    ],
+    "sampled_from": "frame S1E6",
+    "notes": "",
+    "status": "candidate"
+  },
+  {
+    "id": "ep-02",
+    "question_type": "episode",
+    "style": "metadata",
+    "question": "What is the main conflict of Season 2, Episode 1?",
+    "expected_answer": "Carrie trying to get over her breakup with Big: break-up rules, dating a new Yankee, dreading running into Big (S2E1)",
+    "season": 2,
+    "episode": 1,
+    "evidence": [
+      {
+        "season": 2,
+        "episode": 1,
+        "source_row_start": 0,
+        "source_row_end": 4,
+        "expected_quote": "the odds of bumping into the one who broke your heart are incredibly high"
+      },
+      {
+        "season": 2,
+        "episode": 1,
+        "source_row_start": 146,
+        "source_row_end": 148,
+        "expected_quote": "What are the break-up rules"
+      }
+    ],
+    "sampled_from": "frame S2E1",
+    "notes": "PROBE: no content words. Needs metadata-aware retrieval, which the baseline doesn't have; consider excluding or reporting separately.",
+    "status": "candidate"
+  },
+  {
+    "id": "ep-03",
+    "question_type": "episode",
+    "style": "paraphrase",
+    "question": "In the episode where Charlotte discovers her restaurant-critic boyfriend is uncircumcised, what does Carrie want Big to change?",
+    "expected_answer": "She wants more from him, such as a key to his place and for him to spend the night at hers; by the end he stays at her place for the first time (S2E9)",
+    "season": 2,
+    "episode": 9,
+    "evidence": [
+      {
+        "season": 2,
+        "episode": 9,
+        "source_row_start": 274,
+        "source_row_end": 281,
+        "expected_quote": "I hate that I don't have a key to your place"
+      },
+      {
+        "season": 2,
+        "episode": 9,
+        "source_row_start": 378,
+        "source_row_end": 378,
+        "expected_quote": "for the first time, Big spent the night at my place"
+      }
+    ],
+    "sampled_from": "frame S2E9",
+    "notes": "",
+    "status": "candidate"
+  },
+  {
+    "id": "ep-04",
+    "question_type": "episode",
+    "style": "paraphrase",
+    "question": "In the Season 2 finale, what news does Carrie get when she tries to become friends with her ex, and how does she handle it?",
+    "expected_answer": "Big is engaged to Natasha after only five months; Carrie blows up, later wishes him well, then goes to his engagement party at the Plaza to confront him (S2E18)",
+    "season": 2,
+    "episode": 18,
+    "evidence": [
+      {
+        "season": 2,
+        "episode": 18,
+        "source_row_start": 177,
+        "source_row_end": 184,
+        "expected_quote": "after only five months"
+      },
+      {
+        "season": 2,
+        "episode": 18,
+        "source_row_start": 326,
+        "source_row_end": 331,
+        "expected_quote": "my ex-boyfriend is 6 blocks away at the Plaza"
+      }
+    ],
+    "sampled_from": "frame S2E18",
+    "notes": "Mixes a metadata cue ('Season 2 finale') with content cues.",
+    "status": "candidate"
+  },
+  {
+    "id": "ep-05",
+    "question_type": "episode",
+    "style": "paraphrase",
+    "question": "What threatens Carrie's new romance with the furniture designer in the episode where they first meet?",
+    "expected_answer": "Her smoking: Aidan won't date a smoker, and she resents being asked to quit for a man (S3E5)",
+    "season": 3,
+    "episode": 5,
+    "evidence": [
+      {
+        "season": 3,
+        "episode": 5,
+        "source_row_start": 349,
+        "source_row_end": 358,
+        "expected_quote": "For him to dump me over a little thing like smoking"
+      },
+      {
+        "season": 3,
+        "episode": 5,
+        "source_row_start": 417,
+        "source_row_end": 422,
+        "expected_quote": "maybe I can negotiate a little deal for you on the smoking"
+      }
+    ],
+    "sampled_from": "frame S3E5",
+    "notes": "This is the episode from your original example ('main conflict of Season 3, Episode 5'), asked here with content cues.",
+    "status": "candidate"
+  },
+  {
+    "id": "ep-06",
+    "question_type": "episode",
+    "style": "paraphrase",
+    "question": "During the trip to Los Angeles, what question does Carrie keep asking about bags, men and cities, and what answer does she reach?",
+    "expected_answer": "Whether it's what's on the outside that counts; the fakes (a knock-off bag, a house-sitter posing as a homeowner) teach her that what's real inside matters (S3E14)",
+    "season": 3,
+    "episode": 14,
+    "evidence": [
+      {
+        "season": 3,
+        "episode": 14,
+        "source_row_start": 279,
+        "source_row_end": 279,
+        "expected_quote": "When it comes to bags, men and cities"
+      },
+      {
+        "season": 3,
+        "episode": 14,
+        "source_row_start": 500,
+        "source_row_end": 500,
+        "expected_quote": "because inside it was all real"
+      }
+    ],
+    "sampled_from": "frame S3E14",
+    "notes": "",
+    "status": "candidate"
+  },
+  {
+    "id": "ep-07",
+    "question_type": "episode",
+    "style": "paraphrase",
+    "question": "In the episode where Aidan opens a bar with Steve, what is Carrie 'haunted' by, and what happens at the opening?",
+    "expected_answer": "She is haunted by how she treated Aidan; at the opening she realises her feelings for him are real, not a ghost (S4E5)",
+    "season": 4,
+    "episode": 5,
+    "evidence": [
+      {
+        "season": 4,
+        "episode": 5,
+        "source_row_start": 167,
+        "source_row_end": 170,
+        "expected_quote": "are we forever haunted by the spirits of relationships past"
+      },
+      {
+        "season": 4,
+        "episode": 5,
+        "source_row_start": 454,
+        "source_row_end": 455,
+        "expected_quote": "what I felt out there was no ghost it was real"
+      }
+    ],
+    "sampled_from": "frame S4E5",
+    "notes": "",
+    "status": "candidate"
+  },
+  {
+    "id": "ep-08",
+    "question_type": "episode",
+    "style": "paraphrase",
+    "question": "In the episode where Carrie's building goes co-op, how does she react to the idea of marrying Aidan, and how does it end?",
+    "expected_answer": "She panics, throwing up at the sight of the ring and planning to agree only to living together, but when he proposes she says yes (S4E12)",
+    "season": 4,
+    "episode": 12,
+    "evidence": [
+      {
+        "season": 4,
+        "episode": 12,
+        "source_row_start": 52,
+        "source_row_end": 52,
+        "expected_quote": "I saw the ring and I threw up"
+      },
+      {
+        "season": 4,
+        "episode": 12,
+        "source_row_start": 84,
+        "source_row_end": 84,
+        "expected_quote": "I'm not ready to get engaged yet"
+      },
+      {
+        "season": 4,
+        "episode": 12,
+        "source_row_start": 275,
+        "source_row_end": 275,
+        "expected_quote": "That's such a beautiful ring"
+      }
+    ],
+    "sampled_from": "frame S4E12",
+    "notes": "",
+    "status": "candidate"
+  },
+  {
+    "id": "ep-09",
+    "question_type": "episode",
+    "style": "paraphrase",
+    "question": "In the episode where Miranda arranges Brady's christening, what professional opportunity comes to Carrie, and to whom does she dedicate the result?",
+    "expected_answer": "Publishers want to turn her columns into a book; she dedicates it to hopeful single women and to Charlotte (S5E2)",
+    "season": 5,
+    "episode": 2,
+    "evidence": [
+      {
+        "season": 5,
+        "episode": 2,
+        "source_row_start": 186,
+        "source_row_end": 186,
+        "expected_quote": "publishing powerhouses Lily Martin and Courtney Masterson"
+      },
+      {
+        "season": 5,
+        "episode": 2,
+        "source_row_start": 486,
+        "source_row_end": 486,
+        "expected_quote": "I dedicated my baby - my book - to hopeful single women everywhere"
+      }
+    ],
+    "sampled_from": "frame S5E2",
+    "notes": "",
+    "status": "candidate"
+  },
+  {
+    "id": "ep-10",
+    "question_type": "episode",
+    "style": "paraphrase",
+    "question": "In the episode where Samantha competes for a hot waiter at a raw-food restaurant, what problem do Carrie and Berger run into?",
+    "expected_answer": "Their dates are great but there is no sexual chemistry in bed; things turn out fine in the end (S6E2)",
+    "season": 6,
+    "episode": 2,
+    "evidence": [
+      {
+        "season": 6,
+        "episode": 2,
+        "source_row_start": 71,
+        "source_row_end": 72,
+        "expected_quote": "then in bed there was no sexual chemistry"
+      },
+      {
+        "season": 6,
+        "episode": 2,
+        "source_row_start": 428,
+        "source_row_end": 428,
+        "expected_quote": "the other shoe dropped, and it wasn't bad at all"
+      }
+    ],
+    "sampled_from": "frame S6E2",
+    "notes": "",
+    "status": "candidate"
+  },
+  {
+    "id": "ep-11",
+    "question_type": "episode",
+    "style": "metadata",
+    "question": "What is the main conflict of Season 6, Episode 10?",
+    "expected_answer": "Carrie reconnects with her high-school sweetheart Jeremy, who turns out to be living in a psychiatric facility; they break up (S6E10)",
+    "season": 6,
+    "episode": 10,
+    "evidence": [
+      {
+        "season": 6,
+        "episode": 10,
+        "source_row_start": 1,
+        "source_row_end": 1,
+        "expected_quote": "my high-school sweetheart called me"
+      },
+      {
+        "season": 6,
+        "episode": 10,
+        "source_row_start": 252,
+        "source_row_end": 257,
+        "expected_quote": "I wanted a man who would commit, not a man who was committed"
+      }
+    ],
+    "sampled_from": "frame S6E10",
+    "notes": "PROBE: no content words. See ep-02.",
+    "status": "candidate"
+  },
+  {
+    "id": "ep-12",
+    "question_type": "episode",
+    "style": "paraphrase",
+    "question": "In the episode where Charlotte enters her dog in a dog show, what tension develops between Carrie and the Russian?",
+    "expected_answer": "They live in separate worlds: he doesn't share her life or friends and is icy toward them when they drop by (S6E17)",
+    "season": 6,
+    "episode": 17,
+    "evidence": [
+      {
+        "season": 6,
+        "episode": 17,
+        "source_row_start": 257,
+        "source_row_end": 266,
+        "expected_quote": "we don't really have anything in common but each other"
+      },
+      {
+        "season": 6,
+        "episode": 17,
+        "source_row_start": 506,
+        "source_row_end": 506,
+        "expected_quote": "I could not forget the Russian's icy treatment of my friends"
+      }
+    ],
+    "sampled_from": "frame S6E17",
+    "notes": "",
+    "status": "candidate"
+  },
+  {
+    "id": "seq-01",
+    "question_type": "sequence",
+    "style": "event",
+    "question": "What does Skipper do right after Miranda suggests they keep seeing each other while also dating other people?",
+    "expected_answer": "He refuses (he's not her 'private stud horse'), says he's tired of being jerked around and leaves (S1E7)",
+    "targets": [
+      {
+        "season": 1,
+        "episode": 7,
+        "source_row_start": 218,
+        "source_row_end": 220,
+        "expected_quote": "we could see each other and still see other people",
+        "role": "anchor"
+      },
+      {
+        "season": 1,
+        "episode": 7,
+        "source_row_start": 221,
+        "source_row_end": 226,
+        "expected_quote": "I'm tired of being jerked around",
+        "role": "answer"
+      }
+    ],
+    "sampled_from": "frame S1E7@r218",
+    "notes": "",
+    "status": "candidate"
+  },
+  {
+    "id": "seq-02",
+    "question_type": "sequence",
+    "style": "event",
+    "question": "Right after Miranda's awkward attempt at dirty talk with Aaron, whom does Carrie take Susan-Sharon to meet, and how does Carrie describe him?",
+    "expected_answer": "Charlotte's new dog, 'the new male in Charlotte's life': inconsistent, selfishly stubborn and hopelessly codependent (S2E2)",
+    "targets": [
+      {
+        "season": 2,
+        "episode": 2,
+        "source_row_start": 148,
+        "source_row_end": 174,
+        "expected_quote": "Eliza Doolittle in My Filthy Lady",
+        "role": "anchor"
+      },
+      {
+        "season": 2,
+        "episode": 2,
+        "source_row_start": 175,
+        "source_row_end": 181,
+        "expected_quote": "the new male in Charlotte's life",
+        "role": "answer"
+      }
+    ],
+    "sampled_from": "frame S2E2@r140",
+    "notes": "The 'new male' is Charlotte's dog, which is only implied ('Get the ball.'); reject if too indirect.",
+    "status": "candidate"
+  },
+  {
+    "id": "seq-03",
+    "question_type": "sequence",
+    "style": "event",
+    "question": "What misunderstanding happens when Carrie's 'fuck buddy' arrives for the dinner she invited him to?",
+    "expected_answer": "He assumes 'dinner' is code for sex as usual; she explains she really made reservations at a sushi restaurant (S2E14)",
+    "targets": [
+      {
+        "season": 2,
+        "episode": 14,
+        "source_row_start": 152,
+        "source_row_end": 156,
+        "expected_quote": "And just like that, I broke my pattern",
+        "role": "anchor"
+      },
+      {
+        "season": 2,
+        "episode": 14,
+        "source_row_start": 182,
+        "source_row_end": 197,
+        "expected_quote": "When you said dinner, you meant dinner",
+        "role": "answer"
+      }
+    ],
+    "sampled_from": "frame S2E14@r152",
+    "notes": "",
+    "status": "candidate"
+  },
+  {
+    "id": "seq-04",
+    "question_type": "sequence",
+    "style": "event",
+    "question": "What does Carrie do right after the politician Bill Kelley asks for her phone number 'for government purposes only'?",
+    "expected_answer": "She says she isn't into dating right now; when he keeps pushing she leaves and tells Miranda a politician is hitting on her (S3E1)",
+    "targets": [
+      {
+        "season": 3,
+        "episode": 1,
+        "source_row_start": 119,
+        "source_row_end": 119,
+        "expected_quote": "Government purposes only",
+        "role": "anchor"
+      },
+      {
+        "season": 3,
+        "episode": 1,
+        "source_row_start": 120,
+        "source_row_end": 130,
+        "expected_quote": "Politician's hitting on me",
+        "role": "answer"
+      }
+    ],
+    "sampled_from": "frame S3E1@r85",
+    "notes": "",
+    "status": "candidate"
+  },
+  {
+    "id": "seq-05",
+    "question_type": "sequence",
+    "style": "relationship",
+    "question": "Right after Carrie complains that her relationship with Aidan is too effortless, how does Miranda describe her relationship with Steve, and what does Carrie ask her?",
+    "expected_answer": "Miranda says Steve is predictable, comfortable and safe; Carrie asks whether she's dating a man or a mini-van (S3E7)",
+    "targets": [
+      {
+        "season": 3,
+        "episode": 7,
+        "source_row_start": 17,
+        "source_row_end": 30,
+        "expected_quote": "It's freaking me out",
+        "role": "anchor"
+      },
+      {
+        "season": 3,
+        "episode": 7,
+        "source_row_start": 35,
+        "source_row_end": 39,
+        "expected_quote": "Are you dating a man or a mini-van",
+        "role": "answer"
+      }
+    ],
+    "sampled_from": "frame S3E7@r17",
+    "notes": "",
+    "status": "candidate"
+  },
+  {
+    "id": "seq-06",
+    "question_type": "sequence",
+    "style": "event",
+    "question": "What happens the morning after Miranda's first date with Jim, the man Carrie warned her about?",
+    "expected_answer": "Miranda calls Carrie to say the date was great and she's seeing him Friday; Carrie still calls him 'Asshole Jim' (S3E16)",
+    "targets": [
+      {
+        "season": 3,
+        "episode": 16,
+        "source_row_start": 339,
+        "source_row_end": 355,
+        "expected_quote": "I'd like to see you again",
+        "role": "anchor"
+      },
+      {
+        "season": 3,
+        "episode": 16,
+        "source_row_start": 356,
+        "source_row_end": 382,
+        "expected_quote": "Are we talking about Asshole Jim",
+        "role": "answer"
+      }
+    ],
+    "sampled_from": "frame S3E16@r337",
+    "notes": "",
+    "status": "candidate"
+  },
+  {
+    "id": "seq-07",
+    "question_type": "sequence",
+    "style": "event",
+    "question": "Right after Samantha complains at lunch that her new lover uses baby talk in bed, what does Charlotte reveal?",
+    "expected_answer": "That she and Trey are trying to have a baby (S4E6)",
+    "targets": [
+      {
+        "season": 4,
+        "episode": 6,
+        "source_row_start": 131,
+        "source_row_end": 142,
+        "expected_quote": "in baby talk",
+        "role": "anchor"
+      },
+      {
+        "season": 4,
+        "episode": 6,
+        "source_row_start": 147,
+        "source_row_end": 155,
+        "expected_quote": "Trey and I are trying to have a baby",
+        "role": "answer"
+      }
+    ],
+    "sampled_from": "frame S4E6@r110",
+    "notes": "",
+    "status": "candidate"
+  },
+  {
+    "id": "seq-08",
+    "question_type": "sequence",
+    "style": "event",
+    "question": "What happens right after Carrie learns that her elderly neighbour won't move out for another 30 days?",
+    "expected_answer": "She tells Aidan; they agree they can't live with the clutter and start clearing her closet, which turns into a fight over her clothes and his things (S4E13)",
+    "targets": [
+      {
+        "season": 4,
+        "episode": 13,
+        "source_row_start": 98,
+        "source_row_end": 105,
+        "expected_quote": "I'm not leaving for 30 days",
+        "role": "anchor"
+      },
+      {
+        "season": 4,
+        "episode": 13,
+        "source_row_start": 106,
+        "source_row_end": 143,
+        "expected_quote": "How many pairs of shoes does one person need",
+        "role": "answer"
+      }
+    ],
+    "sampled_from": "frame S4E13@r98",
+    "notes": "Same episode as your 'argument about the apartment' example, but a different scene from the smoke item.",
+    "status": "candidate"
+  },
+  {
+    "id": "seq-09",
+    "question_type": "sequence",
+    "style": "event",
+    "question": "What happens the morning after Charlotte lets her new boyfriend stay the night in her apartment?",
+    "expected_answer": "Her ex-mother-in-law Bunny lets herself in, says co-op neighbours reported the visitor, and says the apartment still belongs to the MacDougals (S5E5)",
+    "targets": [
+      {
+        "season": 5,
+        "episode": 5,
+        "source_row_start": 152,
+        "source_row_end": 156,
+        "expected_quote": "She even let him stay the night",
+        "role": "anchor"
+      },
+      {
+        "season": 5,
+        "episode": 5,
+        "source_row_start": 157,
+        "source_row_end": 175,
+        "expected_quote": "It's not your apartment",
+        "role": "answer"
+      }
+    ],
+    "sampled_from": "frame S5E5@r151",
+    "notes": "",
+    "status": "candidate"
+  },
+  {
+    "id": "seq-10",
+    "question_type": "sequence",
+    "style": "event",
+    "question": "What happens right after Miranda suggests getting coffee at the end of her dinner with Paul?",
+    "expected_answer": "Paul says he should call it a night; Miranda assumes he's not into her and presses him; he admits he has diarrhea (S6E4)",
+    "targets": [
+      {
+        "season": 6,
+        "episode": 4,
+        "source_row_start": 337,
+        "source_row_end": 340,
+        "expected_quote": "if you wanna get coffee",
+        "role": "anchor"
+      },
+      {
+        "season": 6,
+        "episode": 4,
+        "source_row_start": 341,
+        "source_row_end": 352,
+        "expected_quote": "I have diarrhea",
+        "role": "answer"
+      }
+    ],
+    "sampled_from": "frame S6E4@r320",
+    "notes": "",
+    "status": "candidate"
+  },
+  {
+    "id": "seq-11",
+    "question_type": "sequence",
+    "style": "event",
+    "question": "Who calls Carrie right after she agrees to meet the Russian artist at a gallery in the middle of the night, and why?",
+    "expected_answer": "Harry: Charlotte has lost the pregnancy and has been sitting and staring since the morning (S6E12)",
+    "targets": [
+      {
+        "season": 6,
+        "episode": 12,
+        "source_row_start": 193,
+        "source_row_end": 211,
+        "expected_quote": "go meet you at some art gallery at 3 am",
+        "role": "anchor"
+      },
+      {
+        "season": 6,
+        "episode": 12,
+        "source_row_start": 212,
+        "source_row_end": 222,
+        "expected_quote": "It just.. you know... went away",
+        "role": "answer"
+      }
+    ],
+    "sampled_from": "frame S6E12@r177",
+    "notes": "The miscarriage is implied, not named.",
+    "status": "candidate"
+  },
+  {
+    "id": "seq-12",
+    "question_type": "sequence",
+    "style": "event",
+    "question": "Right after Carrie scolds her friends for questioning the Russian's offer instead of being happy for her, what does Samantha say?",
+    "expected_answer": "'Anyone wanna talk about cancer? Anybody?' (S6E18)",
+    "targets": [
+      {
+        "season": 6,
+        "episode": 18,
+        "source_row_start": 144,
+        "source_row_end": 170,
+        "expected_quote": "it would be nice if my friends could be happy for me",
+        "role": "anchor"
+      },
+      {
+        "season": 6,
+        "episode": 18,
+        "source_row_start": 171,
+        "source_row_end": 173,
+        "expected_quote": "Anyone wanna talk about cancer",
+        "role": "answer"
+      }
+    ],
+    "sampled_from": "frame S6E18@r132",
+    "notes": "",
+    "status": "candidate"
+  },
+  {
+    "id": "arc-01",
+    "question_type": "arc",
+    "style": "multi_evidence",
+    "question": "How does Charlotte's attitude toward marriage change from her vow to find a husband in Season 3 to the aftermath of her first marriage?",
+    "expected_answer": "She declares she'll get married that year; after marrying Trey she calls her marriage a 'fake Fendi' that only looks perfect; once separated she admits they married too fast",
+    "targets": [
+      {
+        "season": 3,
+        "episode": 1,
+        "source_row_start": 150,
+        "source_row_end": 153,
+        "expected_quote": "I'm getting married this year"
+      },
+      {
+        "season": 3,
+        "episode": 14,
+        "source_row_start": 309,
+        "source_row_end": 312,
+        "expected_quote": "My marriage is a fake Fendi"
+      },
+      {
+        "season": 4,
+        "episode": 1,
+        "source_row_start": 55,
+        "source_row_end": 62,
+        "expected_quote": "We got married really fast"
+      }
+    ],
+    "sampled_from": "theme",
+    "notes": "",
+    "status": "candidate"
+  },
+  {
+    "id": "arc-02",
+    "question_type": "arc",
+    "style": "multi_evidence",
+    "question": "How do Miranda's feelings about marrying Steve change between his proposal after she learns she is pregnant and the final season?",
+    "expected_answer": "She turns his proposal down ('I don't want to marry you, Steve'), later admits she's in love with him, and eventually proposes to him herself over $3 beers",
+    "targets": [
+      {
+        "season": 4,
+        "episode": 12,
+        "source_row_start": 286,
+        "source_row_end": 292,
+        "expected_quote": "I don't want to marry you, Steve"
+      },
+      {
+        "season": 6,
+        "episode": 1,
+        "source_row_start": 124,
+        "source_row_end": 141,
+        "expected_quote": "I'm in love with Steve"
+      },
+      {
+        "season": 6,
+        "episode": 14,
+        "source_row_start": 67,
+        "source_row_end": 72,
+        "expected_quote": "I proposed to Steve over $3 beers"
+      }
+    ],
+    "sampled_from": "theme",
+    "notes": "",
+    "status": "candidate"
+  },
+  {
+    "id": "arc-03",
+    "question_type": "arc",
+    "style": "multi_evidence",
+    "question": "How does Samantha's relationship with Smith develop from when she takes charge of his career to the end of the series?",
+    "expected_answer": "She renames him and promotes him as 'the next big thing'; she tells him about her breast cancer; he flies back to say he loves her, and she says he's meant more to her than any man she has known",
+    "targets": [
+      {
+        "season": 6,
+        "episode": 5,
+        "source_row_start": 315,
+        "source_row_end": 322,
+        "expected_quote": "Smith is the perfect name for the next big thing"
+      },
+      {
+        "season": 6,
+        "episode": 15,
+        "source_row_start": 372,
+        "source_row_end": 377,
+        "expected_quote": "they found a lump in my breast and it's cancer"
+      },
+      {
+        "season": 6,
+        "episode": 20,
+        "source_row_start": 433,
+        "source_row_end": 442,
+        "expected_quote": "You have been more to me than any man I've ever known"
+      }
+    ],
+    "sampled_from": "theme",
+    "notes": "",
+    "status": "candidate"
+  },
+  {
+    "id": "arc-04",
+    "question_type": "arc",
+    "style": "multi_evidence",
+    "question": "How does Carrie's smoking change over the third season, and how is it tied to the men in her life?",
+    "expected_answer": "She says smoking is the only thing that keeps her balanced; she quits while with non-smoker Aidan (turning down Big's request for a cigarette); she starts again when her affair with Big begins",
+    "targets": [
+      {
+        "season": 3,
+        "episode": 4,
+        "source_row_start": 76,
+        "source_row_end": 77,
+        "expected_quote": "Smoking is the only thing that keeps me balanced"
+      },
+      {
+        "season": 3,
+        "episode": 9,
+        "source_row_start": 106,
+        "source_row_end": 109,
+        "expected_quote": "We always used to share a cigarette together"
+      },
+      {
+        "season": 3,
+        "episode": 11,
+        "source_row_start": 45,
+        "source_row_end": 50,
+        "expected_quote": "I'm smoking and sleeping with Big"
+      }
+    ],
+    "sampled_from": "theme",
+    "notes": "S3E5 (Aidan's no-smokers rule) is used by ep-05, so this arc avoids it.",
+    "status": "candidate"
+  },
+  {
+    "id": "arc-05",
+    "question_type": "arc",
+    "style": "multi_evidence",
+    "question": "How does Carrie's writing career grow beyond her newspaper column in the later seasons?",
+    "expected_answer": "She writes her first Vogue piece, publishes a book of her columns, and the book is sold in Paris with an advance from France",
+    "targets": [
+      {
+        "season": 4,
+        "episode": 17,
+        "source_row_start": 284,
+        "source_row_end": 286,
+        "expected_quote": "my first Vogue piece"
+      },
+      {
+        "season": 5,
+        "episode": 5,
+        "source_row_start": 305,
+        "source_row_end": 308,
+        "expected_quote": "I have a book coming out"
+      },
+      {
+        "season": 6,
+        "episode": 5,
+        "source_row_start": 133,
+        "source_row_end": 137,
+        "expected_quote": "They sold my book in Paris"
+      }
+    ],
+    "sampled_from": "theme",
+    "notes": "S5E2's book deal is ep-09's evidence, so this arc uses other milestones.",
+    "status": "candidate"
+  },
+  {
+    "id": "arc-06",
+    "question_type": "arc",
+    "style": "multi_evidence",
+    "question": "What obstacles does Charlotte face in trying to have a baby, first with Trey and later with Harry, and how is it resolved?",
+    "expected_answer": "Tests give her a 15% chance with Trey; with Harry, IVF fails (no viable eggs); even her dog gets pregnant first; finally she and Harry adopt a baby girl",
+    "targets": [
+      {
+        "season": 4,
+        "episode": 11,
+        "source_row_start": 257,
+        "source_row_end": 260,
+        "expected_quote": "15% chance of ever having a baby"
+      },
+      {
+        "season": 6,
+        "episode": 16,
+        "source_row_start": 84,
+        "source_row_end": 90,
+        "expected_quote": "None of my eggs were viable"
+      },
+      {
+        "season": 6,
+        "episode": 18,
+        "source_row_start": 192,
+        "source_row_end": 196,
+        "expected_quote": "everyone around me gets pregnant just not me"
+      },
+      {
+        "season": 6,
+        "episode": 20,
+        "source_row_start": 424,
+        "source_row_end": 428,
+        "expected_quote": "That's really our baby"
+      }
+    ],
+    "sampled_from": "theme",
+    "notes": "Four targets.",
+    "status": "candidate"
+  },
+  {
+    "id": "arc-07",
+    "question_type": "arc",
+    "style": "multi_evidence",
+    "question": "How does Samantha's relationship with Richard change, from first telling him she loves him to walking away?",
+    "expected_answer": "She blurts out 'I love you' while high and he brushes it off; later he proposes they be monogamous; after being hurt before, she ends it: 'I love you too, Richard, but I love me more'",
+    "targets": [
+      {
+        "season": 4,
+        "episode": 14,
+        "source_row_start": 141,
+        "source_row_end": 146,
+        "expected_quote": "I love you, Richard. I am in love with you"
+      },
+      {
+        "season": 4,
+        "episode": 17,
+        "source_row_start": 280,
+        "source_row_end": 283,
+        "expected_quote": "Samantha finally got what she needed, monogamy"
+      },
+      {
+        "season": 5,
+        "episode": 3,
+        "source_row_start": 420,
+        "source_row_end": 428,
+        "expected_quote": "I love you too, Richard, but I love me more"
+      }
+    ],
+    "sampled_from": "theme",
+    "notes": "The last target is a well-known line.",
+    "status": "candidate"
+  },
+  {
+    "id": "arc-08",
+    "question_type": "arc",
+    "style": "multi_evidence",
+    "question": "How does Miranda's relationship with her housekeeper Magda change over the series?",
+    "expected_answer": "Early on Magda reorganises Miranda's bathroom, discovering her 'goodie-drawer' and leaving a gift; later she offers to help with the baby; at the end, after Miranda takes in Steve's mother, Magda tells her 'That is love'",
+    "targets": [
+      {
+        "season": 3,
+        "episode": 3,
+        "source_row_start": 160,
+        "source_row_end": 169,
+        "expected_quote": "Magda had discovered Miranda's goodie-drawer"
+      },
+      {
+        "season": 5,
+        "episode": 3,
+        "source_row_start": 157,
+        "source_row_end": 162,
+        "expected_quote": "Magda has offered to help Steve"
+      },
+      {
+        "season": 6,
+        "episode": 20,
+        "source_row_start": 429,
+        "source_row_end": 432,
+        "expected_quote": "That is love"
+      }
+    ],
+    "sampled_from": "theme",
+    "notes": "Secondary-character arc. What exactly Miranda did before 'That is love' is only partly in the dialogue (r202: 'Your mother can come live with us.').",
+    "status": "candidate"
+  },
+  {
+    "id": "arc-09",
+    "question_type": "arc",
+    "style": "multi_evidence",
+    "question": "What stands in the way of Charlotte and Harry's relationship at first, and what does Charlotte decide to do about it?",
+    "expected_answer": "Harry says he has to marry a Jew and would want their children raised Jewish; Charlotte decides to convert and meets a rabbi",
+    "targets": [
+      {
+        "season": 5,
+        "episode": 8,
+        "source_row_start": 282,
+        "source_row_end": 287,
+        "expected_quote": "I have to marry a Jew"
+      },
+      {
+        "season": 6,
+        "episode": 1,
+        "source_row_start": 343,
+        "source_row_end": 348,
+        "expected_quote": "I would want our children to be raised Jewish"
+      },
+      {
+        "season": 6,
+        "episode": 2,
+        "source_row_start": 113,
+        "source_row_end": 117,
+        "expected_quote": "I'm meeting with a rabbi to discuss converting"
+      }
+    ],
+    "sampled_from": "theme",
+    "notes": "",
+    "status": "candidate"
+  },
+  {
+    "id": "arc-10",
+    "question_type": "arc",
+    "style": "multi_evidence",
+    "question": "How does Carrie's affair with Big come back to affect her engagement to Aidan?",
+    "expected_answer": "When she confesses the affair, Aidan asks to be alone; later, engaged, Aidan pushes to marry immediately and Carrie says she can't marry him to make him trust her",
+    "targets": [
+      {
+        "season": 3,
+        "episode": 12,
+        "source_row_start": 352,
+        "source_row_end": 366,
+        "expected_quote": "Aidan, I slept with my ex-boyfriend"
+      },
+      {
+        "season": 4,
+        "episode": 15,
+        "source_row_start": 251,
+        "source_row_end": 261,
+        "expected_quote": "I can't marry you to make you trust me"
+      }
+    ],
+    "sampled_from": "theme",
+    "notes": "",
+    "status": "candidate"
+  },
+  {
+    "id": "arc-11",
+    "question_type": "arc",
+    "style": "multi_evidence",
+    "question": "How does Miranda go from an unplanned pregnancy to coping as a new mother?",
+    "expected_answer": "She books an abortion but changes her mind ('I'm keeping the baby'); as new parents she and Steve are both afraid they'll 'kill the baby' and make an agreement to share care",
+    "targets": [
+      {
+        "season": 4,
+        "episode": 11,
+        "source_row_start": 325,
+        "source_row_end": 339,
+        "expected_quote": "I'm keeping the baby"
+      },
+      {
+        "season": 5,
+        "episode": 3,
+        "source_row_start": 118,
+        "source_row_end": 124,
+        "expected_quote": "We're both afraid we're going to kill the baby"
+      }
+    ],
+    "sampled_from": "theme",
+    "notes": "",
+    "status": "candidate"
+  },
+  {
+    "id": "arc-12",
+    "question_type": "arc",
+    "style": "multi_evidence",
+    "question": "How does Steve's cancer diagnosis end up leading to Miranda's pregnancy?",
+    "expected_answer": "Aidan tells Miranda that Steve has testicular cancer; after surgery Steve feels no one will want him, so Miranda sleeps with him; she gets pregnant despite his one testicle and her 'lazy ovary'",
+    "targets": [
+      {
+        "season": 4,
+        "episode": 9,
+        "source_row_start": 22,
+        "source_row_end": 27,
+        "expected_quote": "Steve's got testicular cancer"
+      },
+      {
+        "season": 4,
+        "episode": 10,
+        "source_row_start": 282,
+        "source_row_end": 287,
+        "expected_quote": "who's gonna fuck a uniball bartender"
+      },
+      {
+        "season": 4,
+        "episode": 11,
+        "source_row_start": 15,
+        "source_row_end": 21,
+        "expected_quote": "He only has one Ball and I have a lazy ovary"
+      }
+    ],
+    "sampled_from": "theme",
+    "notes": "Chain of cause and effect across three consecutive episodes.",
+    "status": "candidate"
+  }
+]

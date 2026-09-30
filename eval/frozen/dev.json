@@ -1,0 +1,558 @@
+[
+  {
+    "id": "who-07",
+    "question_type": "who_said",
+    "style": "paraphrase",
+    "question": "Which man who shares Samantha's name jokes that her getting all his calls explains why he's still a virgin?",
+    "expected_answer": "Sam Jones (S3E17)",
+    "season": 3,
+    "episode": 17,
+    "source_row_start": 192,
+    "source_row_end": 196,
+    "expected_quote": "why I'm still a virgin",
+    "evidence": [
+      {
+        "season": 3,
+        "episode": 17,
+        "source_row_start": 216,
+        "source_row_end": 216,
+        "expected_quote": "give him the great first-time experience",
+        "role": "premise"
+      }
+    ],
+    "sampled_from": "frame S3E17@r186",
+    "notes": "Also checks that the label 'Sam Jones' was not normalized to Samantha.",
+    "status": "approved",
+    "revision": "span tightened 186-196 -> 188-196; audit v3: gendered wording and 'young' dropped (not stated in the dialogue); audit v4: rewritten naturally: r216 ('that virgin ... give him') establishes that Sam Jones is a man; span 188-196 -> 192-196"
+  },
+  {
+    "id": "who-12",
+    "question_type": "who_said",
+    "style": "lexical",
+    "question": "At a party, who teases Samantha by asking how long she has been 'babysitting' when he sees her with Smith?",
+    "expected_answer": "Richard, who is hosting the party (S6E13)",
+    "season": 6,
+    "episode": 13,
+    "source_row_start": 413,
+    "source_row_end": 420,
+    "expected_quote": "how long have you been babysitting",
+    "sampled_from": "frame S6E13@r385",
+    "notes": "",
+    "status": "approved",
+    "revision": "span tightened 411-421 -> 413-420; audit v3: 'club' -> 'party' (r420) and 'Samantha's ex' dropped (not in the cited lines)"
+  },
+  {
+    "id": "who-13",
+    "question_type": "who_said",
+    "style": "lexical",
+    "question": "Which SoHo painter, described as a notorious 'modelizer', claims it is easier to sleep with a model than a regular girl?",
+    "expected_answer": "Barkley (S1E2)",
+    "season": 1,
+    "episode": 2,
+    "source_row_start": 132,
+    "source_row_end": 134,
+    "expected_quote": "a notorious modelizer",
+    "sampled_from": "rare-term sample (seed 20260930) from episodes no v1 candidate used",
+    "notes": "New lexical item: rare term 'modelizer'.",
+    "status": "approved"
+  },
+  {
+    "id": "fact-09",
+    "question_type": "scene_fact",
+    "style": "paraphrase",
+    "question": "What gift do Carrie and Samantha bring to Miranda's baby shower, and what does Carrie wish they had bought instead?",
+    "expected_answer": "A four-tiered cake made entirely of diapers; she wishes they had bought the massage certificate (S4E17)",
+    "season": 4,
+    "episode": 17,
+    "source_row_start": 217,
+    "source_row_end": 226,
+    "expected_quote": "baby cake made entirely of diapers",
+    "sampled_from": "frame S4E17@r210",
+    "notes": "",
+    "status": "approved",
+    "revision": "span tightened 216-226 -> 217-226"
+  },
+  {
+    "id": "fact-10",
+    "question_type": "scene_fact",
+    "style": "paraphrase",
+    "question": "Why does Carrie choose to take the train to San Francisco instead of flying?",
+    "expected_answer": "Flying makes her nervous (she hates watching the National Guard go through her makeup case), and a train trip with Samantha sounds fun (S5E7)",
+    "season": 5,
+    "episode": 7,
+    "source_row_start": 26,
+    "source_row_end": 29,
+    "expected_quote": "flying makes me nervous",
+    "sampled_from": "frame S5E7@r26",
+    "notes": "",
+    "status": "approved"
+  },
+  {
+    "id": "fact-14",
+    "question_type": "scene_fact",
+    "style": "lexical",
+    "question": "Which Stephen Ambrose book is Miranda reading when she chats with Jack, and which Ambrose book has Jack just finished?",
+    "expected_answer": "Crazy Horse and Custer; Jack has just finished Undaunted Courage, about Meriwether Lewis and Thomas Jefferson (S2E12)",
+    "season": 2,
+    "episode": 12,
+    "source_row_start": 89,
+    "source_row_end": 95,
+    "expected_quote": "Crazy Horse and Custer",
+    "sampled_from": "rare-term sample (seed 20260930) from episodes no v1 candidate used",
+    "notes": "New lexical item: author and book titles. This 'Jack' is not Berger (label correctly left unmapped).",
+    "status": "approved",
+    "revision": "audit v3: 'her neighbour' dropped (not stated)"
+  },
+  {
+    "id": "char-06",
+    "question_type": "character",
+    "style": "paraphrase",
+    "question": "Why does Debbie, the junior executive Carrie meets in Los Angeles, think Carrie's columns would make a hit film?",
+    "expected_answer": "She identifies with Carrie: if she has had her heart broken, so have other women, which means a big 'chick flick' opening weekend (S3E13)",
+    "season": 3,
+    "episode": 13,
+    "source_row_start": 145,
+    "source_row_end": 152,
+    "expected_quote": "big opening weekend",
+    "evidence": [
+      {
+        "season": 3,
+        "episode": 13,
+        "source_row_start": 132,
+        "source_row_end": 133,
+        "expected_quote": "I love your columns",
+        "role": "premise"
+      }
+    ],
+    "sampled_from": "frame S3E13@r140",
+    "notes": "",
+    "status": "approved",
+    "revision": "audit v3: 'Hollywood producer' reworded; premise evidence r132-133 cites the executive and the columns"
+  },
+  {
+    "id": "char-08",
+    "question_type": "character",
+    "style": "relationship",
+    "question": "How does Trey react when Charlotte brings up her doctor's suggestion over dinner?",
+    "expected_answer": "He gets angry that she assumes the problem is him after only three months, says the subject has put him off his dinner, and excuses himself (S4E10)",
+    "season": 4,
+    "episode": 10,
+    "source_row_start": 48,
+    "source_row_end": 57,
+    "expected_quote": "the problem is me",
+    "sampled_from": "frame S4E10@r42",
+    "notes": "The question avoids the word 'sperm' used in the target.",
+    "status": "approved",
+    "revision": "audit v3: 'leaves the table' -> 'excuses himself' (his exit is not stated)"
+  },
+  {
+    "id": "char-09",
+    "question_type": "character",
+    "style": "paraphrase",
+    "question": "Why does Carrie conclude that her love life is over when the friends discuss a theory from a magazine?",
+    "expected_answer": "Charlotte says everyone only gets two great loves, and Carrie counts Aidan and Big as her two (S5E1)",
+    "targets": [
+      {
+        "season": 5,
+        "episode": 1,
+        "source_row_start": 48,
+        "source_row_end": 50,
+        "expected_quote": "you only get two great loves"
+      },
+      {
+        "season": 5,
+        "episode": 1,
+        "source_row_start": 71,
+        "source_row_end": 81,
+        "expected_quote": "According to you, I'm done"
+      }
+    ],
+    "requires_all_targets": true,
+    "sampled_from": "frame S5E1@r68",
+    "notes": "Two targets: Charlotte's claim and Carrie's conclusion, 21 rows apart.",
+    "status": "approved",
+    "revision": "one 34-row span 48-81 -> two targets 48-49 and 71-81; audit v3: 'at lunch' dropped; first target 48-49 -> 48-50 to include the magazine line"
+  },
+  {
+    "id": "char-11",
+    "question_type": "character",
+    "style": "relationship",
+    "question": "When Robert asks what Miranda is watching, how does he react to the show she calls silly?",
+    "expected_answer": "He asks what it's about and says he's intrigued (his cable isn't hooked up yet) (Jules & Mimi, S6E9)",
+    "season": 6,
+    "episode": 9,
+    "source_row_start": 448,
+    "source_row_end": 459,
+    "expected_quote": "I'm intrigued",
+    "sampled_from": "frame S6E9@r430",
+    "notes": "",
+    "status": "approved",
+    "revision": "span tightened 432-462 -> 448-459; audit v3: 'drops by to check on' and 'soap opera she is embarrassed to be watching' reworded to what the lines say"
+  },
+  {
+    "id": "ep-03",
+    "question_type": "episode",
+    "style": "paraphrase",
+    "question": "In the episode where Charlotte discovers her restaurant-critic boyfriend is uncircumcised, what does Carrie want Big to change, and does he?",
+    "expected_answer": "She wants more from him, such as a key to his place and for him to spend the night at hers; later, for the first time, he spends the night at her place (S2E9)",
+    "targets": [
+      {
+        "season": 2,
+        "episode": 9,
+        "source_row_start": 274,
+        "source_row_end": 281,
+        "expected_quote": "I don't have a key to your place"
+      },
+      {
+        "season": 2,
+        "episode": 9,
+        "source_row_start": 378,
+        "source_row_end": 378,
+        "expected_quote": "Big spent the night at my place"
+      }
+    ],
+    "requires_all_targets": true,
+    "evidence": [
+      {
+        "season": 2,
+        "episode": 9,
+        "source_row_start": 49,
+        "source_row_end": 49,
+        "expected_quote": "a cute, but feared restaurant critic",
+        "role": "premise"
+      },
+      {
+        "season": 2,
+        "episode": 9,
+        "source_row_start": 58,
+        "source_row_end": 58,
+        "expected_quote": "Uncircumcised",
+        "role": "premise"
+      }
+    ],
+    "sampled_from": "frame S2E9",
+    "notes": "",
+    "status": "approved",
+    "revision": "audit v4: episode-wide relevance replaced by scored answer spans; the question now asks for both parts of the answer, and both answer spans are required"
+  },
+  {
+    "id": "ep-10",
+    "question_type": "episode",
+    "style": "paraphrase",
+    "question": "In the episode where Samantha goes after a hot waiter at a raw-food restaurant, what problem do Carrie and Berger run into?",
+    "expected_answer": "They are great everywhere else, in restaurants and with kisses, but in bed there is no sexual chemistry (S6E2)",
+    "season": 6,
+    "episode": 2,
+    "source_row_start": 68,
+    "source_row_end": 72,
+    "expected_quote": "there was no sexual chemistry",
+    "evidence": [
+      {
+        "season": 6,
+        "episode": 2,
+        "source_row_start": 49,
+        "source_row_end": 49,
+        "expected_quote": "Did you finally bugger Berger",
+        "role": "premise"
+      },
+      {
+        "season": 6,
+        "episode": 2,
+        "source_row_start": 329,
+        "source_row_end": 330,
+        "expected_quote": "there for the hot waiter",
+        "role": "premise"
+      }
+    ],
+    "sampled_from": "frame S6E2",
+    "notes": "",
+    "status": "approved",
+    "revision": "audit v3: 'competes' reworded; 'things turn out fine' dropped (only suggested); audit v4: episode-wide relevance replaced by scored answer spans; r68-72 is the answer span; Samantha's question at r49 names Berger"
+  },
+  {
+    "id": "ep-12",
+    "question_type": "episode",
+    "style": "paraphrase",
+    "question": "In the episode where Charlotte competes at a dog show, what tension develops between Carrie and the Russian?",
+    "expected_answer": "She feels they have nothing in common but each other and aren't involved in each other's lives (he never shares anything about his work), and she can't forget his icy treatment of her friends (S6E17)",
+    "targets": [
+      {
+        "season": 6,
+        "episode": 17,
+        "source_row_start": 256,
+        "source_row_end": 259,
+        "expected_quote": "anything in common but each other"
+      },
+      {
+        "season": 6,
+        "episode": 17,
+        "source_row_start": 506,
+        "source_row_end": 506,
+        "expected_quote": "icy treatment of my friends"
+      }
+    ],
+    "requires_all_targets": true,
+    "evidence": [
+      {
+        "season": 6,
+        "episode": 17,
+        "source_row_start": 242,
+        "source_row_end": 242,
+        "expected_quote": "Things are serious with the Russian",
+        "role": "premise"
+      },
+      {
+        "season": 6,
+        "episode": 17,
+        "source_row_start": 388,
+        "source_row_end": 388,
+        "expected_quote": "Charlotte was a dog show natural",
+        "role": "premise"
+      }
+    ],
+    "sampled_from": "frame S6E17",
+    "notes": "",
+    "status": "approved",
+    "revision": "audit v3: 'when they drop by' dropped (not stated); premise r388 added (the dog is not named as hers in the dialogue); audit v4: episode-wide relevance replaced by scored answer spans; r256-259 and r506 both required; r242 shows the conversation is about the Russian"
+  },
+  {
+    "id": "seq-01",
+    "question_type": "sequence",
+    "style": "event",
+    "question": "What does Skipper do right after Miranda suggests they keep seeing each other while also dating other people?",
+    "expected_answer": "He refuses (he's not her 'private stud horse'), says he's tired of being jerked around, and tells her he hopes she finds what she's looking for (S1E7)",
+    "targets": [
+      {
+        "season": 1,
+        "episode": 7,
+        "source_row_start": 218,
+        "source_row_end": 220,
+        "expected_quote": "still see other people",
+        "role": "anchor"
+      },
+      {
+        "season": 1,
+        "episode": 7,
+        "source_row_start": 221,
+        "source_row_end": 226,
+        "expected_quote": "tired of being jerked around",
+        "role": "answer"
+      }
+    ],
+    "requires_all_targets": true,
+    "sampled_from": "frame S1E7@r218",
+    "notes": "",
+    "status": "approved",
+    "revision": "audit v4: 'and leaves' (only implied by 'come back') replaced by his last line (r226)"
+  },
+  {
+    "id": "seq-03",
+    "question_type": "sequence",
+    "style": "event",
+    "question": "What misunderstanding arises over the dinner Carrie invites her 'fuck buddy' to?",
+    "expected_answer": "He assumes 'dinner' means sex, as it always has with them; she explains she really made reservations at a sushi restaurant (S2E14)",
+    "targets": [
+      {
+        "season": 2,
+        "episode": 14,
+        "source_row_start": 151,
+        "source_row_end": 156,
+        "expected_quote": "have dinner Friday night",
+        "role": "anchor"
+      },
+      {
+        "season": 2,
+        "episode": 14,
+        "source_row_start": 188,
+        "source_row_end": 197,
+        "expected_quote": "When you said dinner, you meant dinner",
+        "role": "answer"
+      }
+    ],
+    "requires_all_targets": true,
+    "evidence": [
+      {
+        "season": 2,
+        "episode": 14,
+        "source_row_start": 157,
+        "source_row_end": 157,
+        "expected_quote": "you can't date your fuck buddy",
+        "role": "premise"
+      }
+    ],
+    "sampled_from": "frame S2E14@r152",
+    "notes": "Anchor and answer are 32 rows apart; the answer calls back to the invitation ('When you said dinner'), with the same speaker label.",
+    "status": "approved",
+    "revision": "answer span tightened 182-197 -> 188-197; audit v3: anchor 152-156 -> 151-157; audit v4: anchor 151-157 -> 151-156 (the invitation) with r157 ('fuck buddy') as premise; 'arrives' dropped"
+  },
+  {
+    "id": "seq-07",
+    "question_type": "sequence",
+    "style": "event",
+    "question": "Soon after Samantha complains that her lover used baby talk in bed, what does Charlotte reveal?",
+    "expected_answer": "That she and Trey are trying to have a baby (S4E6)",
+    "targets": [
+      {
+        "season": 4,
+        "episode": 6,
+        "source_row_start": 132,
+        "source_row_end": 137,
+        "expected_quote": "in baby talk",
+        "role": "anchor"
+      },
+      {
+        "season": 4,
+        "episode": 6,
+        "source_row_start": 147,
+        "source_row_end": 150,
+        "expected_quote": "trying to have a baby",
+        "role": "answer"
+      }
+    ],
+    "requires_all_targets": true,
+    "sampled_from": "frame S4E6@r110",
+    "notes": "Nine rows (r138-146) sit between anchor and answer, hence 'soon after' rather than 'right after'.",
+    "status": "approved",
+    "revision": "anchor span tightened 131-142 -> 132-137; audit v3: 'at lunch' and 'new' dropped (not in the cited lines); audit v4: 'right after' -> 'soon after' (r138-146 intervene); answer span 147-155 -> 147-150"
+  },
+  {
+    "id": "arc-01",
+    "question_type": "arc",
+    "style": "multi_evidence",
+    "question": "How does Charlotte's view of marriage change, from vowing to find a husband within the year to taking time to figure things out with Trey?",
+    "expected_answer": "She declares she'll meet the perfect guy and get married that year; once married to Trey she calls her marriage a 'fake Fendi', perfect only from the outside; while they take time to figure things out, she admits they married too fast without thinking it through",
+    "targets": [
+      {
+        "season": 3,
+        "episode": 1,
+        "source_row_start": 150,
+        "source_row_end": 153,
+        "expected_quote": "I'm getting married this year"
+      },
+      {
+        "season": 3,
+        "episode": 14,
+        "source_row_start": 309,
+        "source_row_end": 312,
+        "expected_quote": "My marriage is a fake Fendi"
+      },
+      {
+        "season": 4,
+        "episode": 1,
+        "source_row_start": 55,
+        "source_row_end": 62,
+        "expected_quote": "We got married really fast"
+      }
+    ],
+    "requires_all_targets": true,
+    "sampled_from": "theme",
+    "notes": "",
+    "status": "approved",
+    "revision": "audit v3: 'in Season 3' (metadata) and 'her first marriage' (later plot) removed; 'once separated' restated as the lines put it"
+  },
+  {
+    "id": "arc-04",
+    "question_type": "arc",
+    "style": "multi_evidence",
+    "question": "How does Carrie's smoking change, and how is it tied to the men in her life?",
+    "expected_answer": "When Sean says it's easier to balance without smoking, she says smoking is the only thing keeping her balanced; later, when Big asks for a cigarette, she tells him she has quit, though they used to share one; when she starts an affair with Big she is smoking again",
+    "targets": [
+      {
+        "season": 3,
+        "episode": 4,
+        "source_row_start": 76,
+        "source_row_end": 77,
+        "expected_quote": "the only thing that keeps me balanced"
+      },
+      {
+        "season": 3,
+        "episode": 9,
+        "source_row_start": 106,
+        "source_row_end": 109,
+        "expected_quote": "used to share a cigarette together"
+      },
+      {
+        "season": 3,
+        "episode": 11,
+        "source_row_start": 45,
+        "source_row_end": 50,
+        "expected_quote": "I'm smoking and sleeping with Big"
+      }
+    ],
+    "requires_all_targets": true,
+    "sampled_from": "theme",
+    "notes": "",
+    "status": "approved",
+    "revision": "audit v3: 'over the third season' removed; uncited 'while with non-smoker Aidan' dropped; audit v4: 'a date' -> 'Sean' (the speaker label; 'date' is only at r73)"
+  },
+  {
+    "id": "arc-09",
+    "question_type": "arc",
+    "style": "multi_evidence",
+    "question": "What stands in the way of Charlotte and Harry's relationship at first, and what does Charlotte decide to do about it?",
+    "expected_answer": "Harry says he has to marry a Jew and would want their children raised Jewish; Charlotte decides to become a Jew and arranges to meet a rabbi about converting",
+    "targets": [
+      {
+        "season": 5,
+        "episode": 8,
+        "source_row_start": 282,
+        "source_row_end": 287,
+        "expected_quote": "I have to marry a Jew"
+      },
+      {
+        "season": 6,
+        "episode": 1,
+        "source_row_start": 343,
+        "source_row_end": 348,
+        "expected_quote": "our children to be raised Jewish"
+      },
+      {
+        "season": 6,
+        "episode": 2,
+        "source_row_start": 113,
+        "source_row_end": 117,
+        "expected_quote": "meeting with a rabbi to discuss converting"
+      }
+    ],
+    "requires_all_targets": true,
+    "sampled_from": "theme",
+    "notes": "",
+    "status": "approved",
+    "revision": "audit v3: 'meets a rabbi' -> 'arranges to meet' (the meeting itself is not cited)"
+  },
+  {
+    "id": "arc-12",
+    "question_type": "arc",
+    "style": "multi_evidence",
+    "question": "How does Steve's cancer diagnosis end up leading to a baby?",
+    "expected_answer": "Aidan tells Miranda that Steve has testicular cancer; left with one testicle, Steve feels no one will want him, so Miranda sleeps with him once out of sympathy, without a condom; despite his one testicle and her 'lazy ovary', it creates a baby",
+    "targets": [
+      {
+        "season": 4,
+        "episode": 9,
+        "source_row_start": 22,
+        "source_row_end": 27,
+        "expected_quote": "Steve's got testicular cancer"
+      },
+      {
+        "season": 4,
+        "episode": 10,
+        "source_row_start": 282,
+        "source_row_end": 287,
+        "expected_quote": "a uniball bartender"
+      },
+      {
+        "season": 4,
+        "episode": 11,
+        "source_row_start": 15,
+        "source_row_end": 21,
+        "expected_quote": "I have a lazy ovary"
+      }
+    ],
+    "requires_all_targets": true,
+    "sampled_from": "theme",
+    "notes": "Chain of cause and effect across three consecutive episodes.",
+    "status": "approved",
+    "revision": "audit v3: 'after surgery' (not stated) reworded; audit v4: 'pregnancy'/'pregnant' replaced by what r19-21 say ('create a baby'); 'without a condom' (r19) added"
+  }
+]
