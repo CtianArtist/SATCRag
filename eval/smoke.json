@@ -1,0 +1,30 @@
+[
+  {"id": "smoke-01", "type": "who_said",
+   "question": "Who says \"I don't do plants\"?",
+   "expected_answer": "Carrie",
+   "season": 4, "episode": 13, "source_row_start": 18, "source_row_end": 18,
+   "expected_quote": "I don't do plants"},
+  {"id": "smoke-02", "type": "who_said",
+   "question": "Who says that instead of breakfast at Tiffany's we have breakfast at 7:00 a.m. and affairs we try to forget?",
+   "expected_answer": "Carrie",
+   "season": 1, "episode": 1, "source_row_start": 37, "source_row_end": 38,
+   "expected_quote": "we have breakfast at 7:00 a.m. and affairs we try to forget"},
+  {"id": "smoke-03", "type": "scene_fact",
+   "question": "When Aidan moves in, what does Carrie complain his new work area is blocking?",
+   "expected_answer": "Her bathroom door",
+   "season": 4, "episode": 13, "source_row_start": 4, "source_row_end": 9,
+   "expected_quote": "you're blocking the bathroom door"},
+  {"id": "smoke-04", "type": "multi_target",
+   "question": "How does Carrie describe the way Berger ended their relationship?",
+   "expected_answer": "He broke up with her on a Post-it",
+   "targets": [
+     {"season": 6, "episode": 7, "source_row_start": 19, "source_row_end": 19,
+      "expected_quote": "Berger broke up with me on a Post-it"},
+     {"season": 6, "episode": 7, "source_row_start": 257, "source_row_end": 257,
+      "expected_quote": "Berger broke up with me on a Post-it"}
+   ]},
+  {"id": "smoke-05", "type": "episode",
+   "question": "In which episode do Carrie and Aidan clash over his things taking over her apartment?",
+   "expected_answer": "S4E13",
+   "season": 4, "episode": 13}
+]

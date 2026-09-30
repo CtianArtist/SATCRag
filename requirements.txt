@@ -1,0 +1,14 @@
+# Install the CPU-only PyTorch build FIRST, so nothing pulls the multi-GB CUDA build:
+#   pip install torch==2.14.0 --index-url https://download.pytorch.org/whl/cpu
+# then: pip install -r requirements.txt
+# Versions are pinned because they can change embeddings and rankings (each index manifest records them).
+torch==2.14.0
+sentence-transformers==6.1.0
+transformers==5.17.0
+huggingface_hub==1.33.0
+tokenizers==0.23.2
+numpy==2.5.3
+rank-bm25==0.2.2
+pytest==9.1.1
+
+# Added in later phases: anthropic, python-dotenv

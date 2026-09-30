@@ -1,0 +1,39 @@
+{
+  "_about": "Explicit speaker-label aliases applied by src/speakers.py. Keys are labels after whitespace/parenthesis/number/case cleanup. Every entry was checked against the surrounding dialogue; the reason says what the evidence was. Ambiguous names (Sam, Jack) are only mapped inside the listed episodes.",
+  "global": [
+    {"from": "Carre", "to": "Carrie", "reason": "Typo; S3E2 row sits inside a Carrie exchange."},
+    {"from": "Carie", "to": "Carrie", "reason": "Typo; S4E4 narration line."},
+    {"from": "Crri", "to": "Carrie", "reason": "Typo; S3E9 row continues Carrie's narration from the previous row."},
+    {"from": "Care", "to": "Carrie", "reason": "Typo; S3E7 row sits between two Carrie lines."},
+    {"from": "Mirana", "to": "Miranda", "reason": "Typo; S2E13 row sits inside a Miranda exchange."},
+    {"from": "Mirando", "to": "Miranda", "reason": "Typo inside the S2 label 'Mirando and Steve'."},
+    {"from": "Samanth", "to": "Samantha", "reason": "Typo inside the label 'Samanth and Charlotte'."},
+    {"from": "Satnford", "to": "Stanford", "reason": "Typo; S1E2 row reads 'Carrie, it's Stanford.'"},
+    {"from": "Stanford Blatch", "to": "Stanford", "reason": "Full name of the same character."},
+    {"from": "Steve Brady", "to": "Steve", "reason": "Full name of the same character."},
+    {"from": "Trey MacDougal", "to": "Trey", "reason": "Full name of the same character."},
+    {"from": "Try", "to": "Trey", "reason": "Typo; all three rows (S3E12, S3E15, S3E16) sit inside Trey exchanges."},
+    {"from": "Aiden", "to": "Aidan", "reason": "Misspelling; all 15 rows are in S4E14, an Aidan episode."},
+    {"from": "Mr.Big", "to": "Big", "reason": "Variant label for the same character (S1E2, S1E7)."},
+    {"from": "Miranda (on answering machine)", "to": "Miranda", "reason": "Miranda's own voice leaving a message (S1E7)."},
+    {"from": "Miranda answering machine", "to": "Miranda", "reason": "Miranda's outgoing message: 'Hi, this is Miranda.' (S1E2)."},
+    {"from": "Answering machine (Carrie's)", "to": "Carrie", "reason": "Carrie's outgoing message: 'Hi, it's me. Leave a message.' (S6E1)."},
+    {"from": "Steve's answering machine", "to": "Steve", "reason": "Steve's outgoing message: 'It's me, Steve. I'm not here.' (S5E8)."},
+    {"from": "Richard's voicemail", "to": "Richard", "reason": "Richard's outgoing message: 'This is Richard. You have 30 seconds.' (S5E8)."},
+    {"from": "Willow's Voice", "to": "Willow", "reason": "Willow's recorded message played by Big (S4E10)."}
+  ],
+  "episode_scoped": [
+    {
+      "from": "Jack",
+      "to": "Jack Berger",
+      "episodes": ["S5E5", "S5E8", "S6E1", "S6E2", "S6E3", "S6E4", "S6E5", "S6E6"],
+      "reason": "In these episodes other lines mention 'Berger' (4-10 lines each). The Jacks in S1E8 and S2E12 are different men, so they keep the label 'Jack'."
+    },
+    {
+      "from": "Sam",
+      "to": "Samantha",
+      "episodes": ["S2E7", "S5E8"],
+      "reason": "Short for Samantha here (S2E7: the four women's conversation; S5E8: 'I've got the house this weekend' then 'I'm having a party at 3:00'). In S1E4 'Sam' is Samantha's waiter date and stays 'Sam'."
+    }
+  ]
+}

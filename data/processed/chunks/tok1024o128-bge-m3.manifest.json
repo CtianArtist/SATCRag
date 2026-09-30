@@ -1,0 +1,11 @@
+{
+  "config_id": "tok1024o128-bge-m3",
+  "size": 1024,
+  "overlap": 128,
+  "tokenizer": "BAAI/bge-m3",
+  "tokenizer_revision": "5617a9f61b028005a4858fdac845db406aefb181",
+  "inferred_scenes": true,
+  "n_chunks": 621,
+  "lines_sha256": "5b26edce04feab849a53bc95d0773a2927bbb8ad7e936d9dd0b2abf2dac9c54c",
+  "chunks_sha256": "23a044df4b6b6f10a4640ac99b241a87e9617bfda386a2f4dd0bcf3948d515b6"
+}
