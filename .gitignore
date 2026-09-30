@@ -1,0 +1,28 @@
+# Local environments and tool caches
+.venv/
+.venv-*/
+__pycache__/
+.pytest_cache/
+.env
+
+# The SATC transcript corpus is not redistributed: download_data.py fetches it into data/raw/
+data/raw/
+
+# Derived copies of the corpus text (lines, chunks, scenes, parse report) are rebuilt locally.
+# Chunk-set manifests hold only settings and hashes, so they are kept: after rebuilding,
+# `git diff` on them shows whether the pipeline reproduced byte-identical chunks.
+data/processed/*
+!data/processed/chunks/
+data/processed/chunks/*
+!data/processed/chunks/*.manifest.json
+
+# Embedding caches (rebuilt with `python -m src.index --all`) and model files
+index/
+*.safetensors
+*.bin
+*.onnx
+*.onnx_data
+
+# Temporary Hugging Face / download files, should a cache ever point inside the repo
+.cache/
+*.incomplete
