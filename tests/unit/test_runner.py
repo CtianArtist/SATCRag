@@ -2,9 +2,9 @@
 
 import pytest
 
-from sexandrag.config import Settings
-from sexandrag.errors import ConfigurationError, HeldOutSetError
-from sexandrag.evaluation.runner import (
+from satc_rag.config import Settings
+from satc_rag.errors import ConfigurationError, HeldOutSetError
+from satc_rag.evaluation.runner import (
     EvalRequest,
     compare_outcomes,
     format_summary,
@@ -12,8 +12,8 @@ from sexandrag.evaluation.runner import (
     score_query,
     summarize,
 )
-from sexandrag.evaluation.schema import parse_item
-from sexandrag.retrieve import SearchResult
+from satc_rag.evaluation.schema import parse_item
+from satc_rag.retrieve import SearchResult
 
 K = (1, 5, 10)
 ALL_K = (5, 10)

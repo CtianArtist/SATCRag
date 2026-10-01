@@ -129,7 +129,7 @@ first batch:
   - styles: `lexical`, `paraphrase`, `relationship`, `event`, `multi_evidence`, `metadata`.
 - **All problems at once.** Every problem in a file is reported together, and nothing runs until the
   file is valid. Schema errors can never surface halfway through a benchmark run.
-- **Stricter checks for benchmark items.** `sexandrag validate` requires a `question_type` and a
+- **Stricter checks for benchmark items.** `satc-rag validate` requires a `question_type` and a
   `style`. It also checks that every scored and premise span names an existing episode and rows, and
   that each `expected_quote` lies inside its span.
 
@@ -226,7 +226,7 @@ Run outputs are described in [results/README.md](../results/README.md).
 
 ### How the split was made
 
-`sexandrag freeze` made the split once, from item metadata only:
+`satc-rag freeze` made the split once, from item metadata only:
 
 1. **Type quotas.** Every question type receives its proportional share of the 20 development places.
 2. **Candidate splits.** Within those quotas, 20,000 random splits are drawn from seed `20261001`.
@@ -238,7 +238,7 @@ No retrieval result was consulted, so the split cannot have been shaped toward a
 
 ### Checking the freeze
 
-- **What is checked:** `sexandrag verify --only benchmark` re-checks every file hash, and confirms that
+- **What is checked:** `satc-rag verify --only benchmark` re-checks every file hash, and confirms that
   the recorded seed and strata still reproduce the same split.
 - **Where it runs:** in `make check` and in CI. It needs neither the corpus nor the model.
 - **The freeze is permanent.** `freeze` refuses to overwrite an existing freeze, and it made the files
@@ -269,7 +269,7 @@ No retrieval result was consulted, so the split cannot have been shaped toward a
 
 **How the code enforces it:**
 
-- `sexandrag eval` and `python -m eval.run_eval` evaluate the development set.
+- `satc-rag eval` and `python -m eval.run_eval` evaluate the development set.
 - `--split test` is refused unless `--allow-heldout` is also given.
 - The guard also refuses any `--eval-file` that touches the test set, however it is named:
   - the frozen test file itself, found by path;
@@ -282,9 +282,9 @@ No retrieval result was consulted, so the split cannot have been shaped toward a
 
 ## Writing and checking eval items
 
-- **Finding evidence:** `sexandrag find "a few words" [--season N --episode N]` locates a quote in the
+- **Finding evidence:** `satc-rag find "a few words" [--season N --episode N]` locates a quote in the
   parsed lines and prints a paste-ready target.
-- **Validating:** `sexandrag validate FILE --review data/processed/eval_review_<name>.md` checks the
+- **Validating:** `satc-rag validate FILE --review data/processed/eval_review_<name>.md` checks the
   schema and the provenance, and prints the set's distribution:
   - question types, styles, seasons and characters;
   - target and premise counts, and span lengths;

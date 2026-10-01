@@ -1,4 +1,4 @@
-"""Model supply-chain checks on a fake snapshot (sexandrag.model): digests, structure, loaded-model checks."""
+"""Model supply-chain checks on a fake snapshot (satc_rag.model): digests, structure, loaded-model checks."""
 
 import hashlib
 import json
@@ -9,9 +9,9 @@ from typing import Any
 
 import pytest
 
-from sexandrag.config import BGE_M3, ModelSpec
-from sexandrag.errors import ModelConfigurationError, ModelNotAvailableError
-from sexandrag.model import check_loaded_model, snapshot_path, tokenizer_only_files, verify_snapshot
+from satc_rag.config import BGE_M3, ModelSpec
+from satc_rag.errors import ModelConfigurationError, ModelNotAvailableError
+from satc_rag.model import check_loaded_model, snapshot_path, tokenizer_only_files, verify_snapshot
 
 MODULES = [
     {"idx": 0, "name": "0", "path": "", "type": "sentence_transformers.models.Transformer"},
@@ -97,7 +97,7 @@ def test_tokenizer_only_downloads_skip_the_weights():
 
 
 def test_a_model_that_is_not_cached_is_reported_without_downloading(tmp_path):
-    with pytest.raises(ModelNotAvailableError, match="sexandrag model download"):
+    with pytest.raises(ModelNotAvailableError, match="satc-rag model download"):
         snapshot_path(BGE_M3, cache_dir=tmp_path)
 
 

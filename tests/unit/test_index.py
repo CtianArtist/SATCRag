@@ -1,15 +1,15 @@
-"""Dense index construction, caching, corruption handling and truncation refusal (sexandrag.index)."""
+"""Dense index construction, caching, corruption handling and truncation refusal (satc_rag.index)."""
 
 import json
 
 import numpy as np
 import pytest
 
-from sexandrag.artifacts import ChunkConfig, embedded_content_hash
-from sexandrag.chunk import ChunkSet
-from sexandrag.errors import ArtifactMismatchError, ArtifactMissingError, TextTooLongError
-from sexandrag.index import build_dense_index, cached_indexes, dense_cache_key, get_dense_index, index_location
-from sexandrag.retrieve import build_retrievers
+from satc_rag.artifacts import ChunkConfig, embedded_content_hash
+from satc_rag.chunk import ChunkSet
+from satc_rag.errors import ArtifactMismatchError, ArtifactMissingError, TextTooLongError
+from satc_rag.index import build_dense_index, cached_indexes, dense_cache_key, get_dense_index, index_location
+from satc_rag.retrieve import build_retrievers
 from tests.support.builders import make_chunk
 from tests.support.fakes import FakeEmbedder
 
@@ -54,7 +54,7 @@ def test_rebuild_replaces_a_cached_index_explicitly(tmp_path, chunk_set):
 
 
 def test_retrieval_never_builds_an_index(tmp_path, chunk_set):
-    with pytest.raises(ArtifactMissingError, match="sexandrag index --size 256"):
+    with pytest.raises(ArtifactMissingError, match="satc-rag index --size 256"):
         get_dense_index(chunk_set, FakeEmbedder(), tmp_path)
 
 

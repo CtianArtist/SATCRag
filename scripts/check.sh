@@ -15,7 +15,7 @@ mypy
 step "pytest (unit + integration; corpus and real-model tests skip without local data)"
 PYTHONDONTWRITEBYTECODE=1 python -m pytest -p no:cacheprovider
 step "frozen benchmark: hashes and split"
-sexandrag --quiet verify --only benchmark
+satc-rag --quiet verify --only benchmark
 step "repository hygiene"
 python scripts/check_repo_hygiene.py
 

@@ -2,9 +2,9 @@
 
 import json
 
-from sexandrag.config import Settings
-from sexandrag.evaluation.schema import load_items
-from sexandrag.evaluation.split import read_manifest, verify_frozen
+from satc_rag.config import Settings
+from satc_rag.evaluation.schema import load_items
+from satc_rag.evaluation.split import read_manifest, verify_frozen
 from tests.conftest import REPO_ROOT
 
 FROZEN = REPO_ROOT / "eval" / "frozen"

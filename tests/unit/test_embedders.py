@@ -1,9 +1,9 @@
-"""Truncation refusal and device handling (sexandrag.embedders), without the real model."""
+"""Truncation refusal and device handling (satc_rag.embedders), without the real model."""
 
 import pytest
 
-from sexandrag.embedders import ensure_fits, resolve_device
-from sexandrag.errors import ModelConfigurationError, TextTooLongError
+from satc_rag.embedders import ensure_fits, resolve_device
+from satc_rag.errors import ModelConfigurationError, TextTooLongError
 from tests.support.fakes import FakeEmbedder
 
 

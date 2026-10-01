@@ -1,12 +1,12 @@
-"""Speaker-label normalization and the alias file (sexandrag.speakers)."""
+"""Speaker-label normalization and the alias file (satc_rag.speakers)."""
 
 import json
 from collections import Counter
 
 import pytest
 
-from sexandrag.errors import MetadataError
-from sexandrag.speakers import AliasMap, build_case_map, load_aliases, normalize_speaker, tidy_label
+from satc_rag.errors import MetadataError
+from satc_rag.speakers import AliasMap, build_case_map, load_aliases, normalize_speaker, tidy_label
 
 ALIASES = AliasMap(
     global_aliases={"Crri": "Carrie", "Samanth": "Samantha", "Stanford Blatch": "Stanford"},

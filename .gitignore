@@ -39,7 +39,7 @@ htmlcov/
 *.bak
 *.log
 
-# The SATC transcript corpus is not redistributed: `sexandrag download` fetches it into data/raw/
+# The SATC transcript corpus is not redistributed: `satc-rag download` fetches it into data/raw/
 /data/raw/
 
 # Only project-created metadata (data/meta/) and chunk-set manifests are tracked under data/;
@@ -56,7 +56,7 @@ htmlcov/
 /data/processed/chunks/*
 !/data/processed/chunks/*.manifest.json
 
-# Embedding caches (rebuilt with `sexandrag index --all`) and model files, never committed
+# Embedding caches (rebuilt with `satc-rag index --all`) and model files, never committed
 /index/
 *.safetensors
 *.bin

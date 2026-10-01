@@ -1,9 +1,9 @@
-"""Malformed-row parsing and source-row provenance (sexandrag.load)."""
+"""Malformed-row parsing and source-row provenance (satc_rag.load)."""
 
 import pytest
 
-from sexandrag.errors import CorpusError, CorpusFormatError
-from sexandrag.load import load_rows, read_records
+from satc_rag.errors import CorpusError, CorpusFormatError
+from satc_rag.load import load_rows, read_records
 from tests.support.builders import write_csv
 
 
@@ -123,7 +123,7 @@ def test_unexpected_header_is_rejected_with_the_expected_header(tmp_path):
 
 
 def test_a_missing_corpus_says_how_to_get_it(tmp_path):
-    with pytest.raises(CorpusError, match="sexandrag download"):
+    with pytest.raises(CorpusError, match="satc-rag download"):
         read_records(tmp_path / "absent.csv")
 
 

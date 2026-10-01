@@ -1,7 +1,7 @@
 """Benchmark-item validation against a corpus (evaluation.validate)."""
 
-from sexandrag.evaluation.schema import parse_item
-from sexandrag.evaluation.validate import (
+from satc_rag.evaluation.schema import parse_item
+from satc_rag.evaluation.validate import (
     by_episode,
     check_item,
     lexical_overlap,

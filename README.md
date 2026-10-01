@@ -1,6 +1,6 @@
-# SexAndRag: a retrieval benchmark on noisy TV dialogue
+# SATC-RAG: a retrieval benchmark on noisy TV dialogue
 
-SexAndRag is a **retrieval benchmark and pipeline**, not a chatbot. It takes a messy, semi-structured
+SATC-RAG is a **retrieval benchmark and pipeline**, not a chatbot. It takes a messy, semi-structured
 dataset (every subtitle line of *Sex and the City* as ordered rows with speaker labels) and measures
 how well lexical, dense and hybrid retrieval find the exact lines that answer a question.
 
@@ -127,7 +127,7 @@ result carries its chunk id, season, episode, title, source-row span, speakers, 
     from a recorded seed.
   - Only the development set may be used for failure analysis and tuning.
 - **Discipline, enforced in code:**
-  - `sexandrag eval` runs the development set only.
+  - `satc-rag eval` runs the development set only.
   - The test set needs `--split test --allow-heldout`.
   - Copies, subsets or renamed test items are refused without that flag.
   - Allowed held-out runs are logged and recorded as such.
@@ -140,7 +140,7 @@ Full schema, worked examples and the rules: [docs/evaluation.md](docs/evaluation
   file's digest, and exact library versions (`pyproject.toml` plus `constraints.txt`).
 - **Model supply chain:**
   - Only a pinned 40-character commit hash is accepted; branch names, tags and `refs/pr/N` are refused.
-  - `sexandrag model download` is the only command that uses the network for the model. Every other
+  - `satc-rag model download` is the only command that uses the network for the model. Every other
     command loads from the local cache with the hub forced offline.
   - `trust_remote_code` is always off.
   - After loading, the module stack, pooling mode, dimension and context length are checked. Any
@@ -163,7 +163,7 @@ Full schema, worked examples and the rules: [docs/evaluation.md](docs/evaluation
 - **This repository does not contain or distribute the transcript corpus.** Obtain it yourself from
   its source, the Kaggle dataset
   [snapcrack/every-sex-and-the-city-script](https://www.kaggle.com/datasets/snapcrack/every-sex-and-the-city-script)
-  (version 3), under that dataset's terms. `sexandrag download` fetches it into `data/raw/`.
+  (version 3), under that dataset's terms. `satc-rag download` fetches it into `data/raw/`.
 - **What Git holds:** code, tests, documentation and small metadata the project created. That covers:
   - episode titles, taken from Wikipedia's *List of Sex and the City episodes*;
   - the speaker-alias table;
@@ -183,7 +183,7 @@ Full schema, worked examples and the rules: [docs/evaluation.md](docs/evaluation
 ### Quick start: understand the project without the data
 
 ```bash
-git clone <this repository> SexAndRag && cd SexAndRag
+git clone <this repository> SATC-RAG && cd SATC-RAG
 python3 -m venv .venv && source .venv/bin/activate
 make install        # CPU-only torch first, then: pip install -e ".[dev]" -c constraints.txt
 make check          # format, lint, mypy --strict, all tests, frozen-benchmark hashes, repository hygiene
@@ -197,11 +197,11 @@ make check          # format, lint, mypy --strict, all tests, frozen-benchmark h
   search need no model; chunking needs only the model's tokenizer, about 22 MB:
 
 ```bash
-cp -r tests/fixtures/synthetic /tmp/sexandrag-demo
-sexandrag --root /tmp/sexandrag-demo parse
-sexandrag model download --tokenizer-only
-sexandrag --root /tmp/sexandrag-demo chunk --all
-sexandrag --root /tmp/sexandrag-demo search "where did they find the lost dog" --method bm25
+cp -r tests/fixtures/synthetic /tmp/satc-rag-demo
+satc-rag --root /tmp/satc-rag-demo parse
+satc-rag model download --tokenizer-only
+satc-rag --root /tmp/satc-rag-demo chunk --all
+satc-rag --root /tmp/satc-rag-demo search "where did they find the lost dog" --method bm25
 ```
 
 ### Full setup: from a clean clone to a working retrieval system
@@ -213,7 +213,7 @@ and tested locally on Python 3.14.4 under Linux x86-64. The CI workflow is confi
 **2. Environment.**
 
 ```bash
-git clone <this repository> SexAndRag && cd SexAndRag
+git clone <this repository> SATC-RAG && cd SATC-RAG
 python3 -m venv .venv && source .venv/bin/activate
 ```
 
@@ -223,14 +223,14 @@ build. Then install the package with the tested versions of every dependency:
 ```bash
 pip install torch==2.14.0 --index-url https://download.pytorch.org/whl/cpu
 pip install -e ".[dev,download]" -c constraints.txt     # "download" adds kagglehub for step 4
-sexandrag --version
+satc-rag --version
 ```
 
 **4. The corpus.** Kaggle may ask you to sign in: kagglehub reads `~/.kaggle/kaggle.json` or the
 `KAGGLE_USERNAME` and `KAGGLE_KEY` variables.
 
 ```bash
-sexandrag download        # fetches dataset version 3 into data/raw/SATC_all_lines.csv
+satc-rag download        # fetches dataset version 3 into data/raw/SATC_all_lines.csv
 ```
 
 Alternatively, download version 3 from the Kaggle page yourself and put `SATC_all_lines.csv` in
@@ -240,29 +240,29 @@ Alternatively, download version 3 from the Kaggle page yourself and put `SATC_al
 and a mismatching download is deleted again. To check it on its own:
 
 ```bash
-sexandrag verify --only corpus
+satc-rag verify --only corpus
 ```
 
 **6. Parsing.**
 
 ```bash
-sexandrag parse           # data/processed/lines.jsonl; add --report for the full parse report
+satc-rag parse           # data/processed/lines.jsonl; add --report for the full parse report
 ```
 
 **7. Chunk generation.** Chunk sizes are counted in the embedding model's own tokens, so chunking
 needs its tokenizer (about 22 MB):
 
 ```bash
-sexandrag model download --tokenizer-only
-sexandrag chunk --all     # the 256/32, 512/64 and 1024/128 chunk sets, with manifests
+satc-rag model download --tokenizer-only
+satc-rag chunk --all     # the 256/32, 512/64 and 1024/128 chunk sets, with manifests
 ```
 
 **8. Model acquisition.** This is the only networked model step. It fetches about 2.3 GB, and every
 file is checked against its pinned digest:
 
 ```bash
-sexandrag model download
-sexandrag model verify    # digests and structure (add --deep to hash the 2.3 GB weights again)
+satc-rag model download
+satc-rag model verify    # digests and structure (add --deep to hash the 2.3 GB weights again)
 ```
 
 The files go to the standard Hugging Face cache, or to `paths.model_cache_dir` if you set one.
@@ -273,16 +273,16 @@ minutes on the development machine's CPU, using 8 threads (the recorded build ti
 Reruns reuse a valid cache; `--rebuild` forces a new build.
 
 ```bash
-sexandrag index --all
-sexandrag verify          # corpus, metadata, lines, chunks, indexes, model files, frozen benchmark
+satc-rag index --all
+satc-rag verify          # corpus, metadata, lines, chunks, indexes, model files, frozen benchmark
 ```
 
 **10. Searching.**
 
 ```bash
-sexandrag search "who was asked to walk in a charity fashion show" --method hybrid --size 512 -k 5
-sexandrag search "..." --method bm25 --season 2 --speaker Miranda     # optional metadata filters
-sexandrag inspect s04e13-tok512o64-003                                  # one chunk with full provenance
+satc-rag search "who was asked to walk in a charity fashion show" --method hybrid --size 512 -k 5
+satc-rag search "..." --method bm25 --season 2 --speaker Miranda     # optional metadata filters
+satc-rag inspect s04e13-tok512o64-003                                  # one chunk with full provenance
 ```
 
 On the development machine, loading the model and embedding a first query took about 6 seconds,
@@ -292,7 +292,7 @@ with the model files already in the OS file cache. Memory peaked at about 2 GB r
 the development set with every chunk size and retriever:
 
 ```bash
-sexandrag eval            # results/runs/<UTC time>-dev-<commit>[-dirty]/
+satc-rag eval            # results/runs/<UTC time>-dev-<commit>[-dirty]/
 ```
 
 `python -m eval.run_eval` still works and also means the development set only. The held-out test
@@ -309,11 +309,11 @@ make coverage             # tests with a branch-coverage report
 
 ### Configuration
 
-- **Defaults** reproduce the frozen baseline; `sexandrag config show` prints the effective settings.
-- **Overrides** go in a `sexandrag.toml` at the project root, or in a file passed with `--config`.
+- **Defaults** reproduce the frozen baseline; `satc-rag config show` prints the effective settings.
+- **Overrides** go in a `satc-rag.toml` at the project root, or in a file passed with `--config`.
   Unknown keys, wrong types and contradictory values fail at startup, before any work is done.
 - **Global options** go before the command:
-  - `--root` (or `$SEXANDRAG_ROOT`) and `--config` (or `$SEXANDRAG_CONFIG`) choose the project;
+  - `--root` (or `$SATC_RAG_ROOT`) and `--config` (or `$SATC_RAG_CONFIG`) choose the project;
   - `-v/--verbose` and `-q/--quiet` set the log level, and `--debug` also prints full tracebacks.
 - **Streams and exit codes:** logs go to stderr and results to stdout. Exit codes are 0 for success,
   1 for a known error with a recovery hint, 2 for invalid usage, 70 for an unexpected internal error
@@ -344,7 +344,7 @@ the repository-hygiene check. It needs no dataset, Kaggle credentials, GPU, mode
 
 ## Current benchmark status
 
-- **Built and verified:** the corpus is parsed, chunked at three sizes and indexed, and `sexandrag
+- **Built and verified:** the corpus is parsed, chunked at three sizes and indexed, and `satc-rag
   verify` passes on every artifact.
 - **Frozen:** the 60-question benchmark and its 20/40 dev/test split, with hashes recorded in
   `eval/frozen/MANIFEST.json`.
@@ -379,8 +379,8 @@ the repository-hygiene check. It needs no dataset, Kaggle credentials, GPU, mode
 ## Project layout
 
 ```
-src/sexandrag/             the package: CLI, configuration, parsing, chunking, model, index, retrieval
-src/sexandrag/evaluation/  eval schema, metrics, held-out guard, runner, validator, split and freeze
+src/satc_rag/             the package: CLI, configuration, parsing, chunking, model, index, retrieval
+src/satc_rag/evaluation/  eval schema, metrics, held-out guard, runner, validator, split and freeze
 data/meta/                 episode titles and speaker aliases (project-created metadata)
 data/processed/chunks/     chunk-set manifests only (hashes); the chunks themselves stay local
 eval/frozen/               the frozen benchmark, dev/test split and manifest (read-only)

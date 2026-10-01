@@ -2,7 +2,7 @@
 
 import pytest
 
-from sexandrag.evaluation.metrics import (
+from satc_rag.evaluation.metrics import (
     all_targets_hit_at_k,
     average,
     hit_at_k,
@@ -12,7 +12,7 @@ from sexandrag.evaluation.metrics import (
     score_ranking,
     target_first_ranks,
 )
-from sexandrag.evaluation.schema import parse_item
+from satc_rag.evaluation.schema import parse_item
 from tests.support.builders import chunk_at
 
 

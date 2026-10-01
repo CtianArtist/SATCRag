@@ -33,7 +33,7 @@ def pytest_collection_modifyitems(config: pytest.Config, items: list[pytest.Item
             item.add_marker(pytest.mark.skip(reason="real-model test: pass --run-model or set RUN_MODEL_TESTS=1"))
         if item.get_closest_marker("corpus") and not has_corpus:
             item.add_marker(
-                pytest.mark.skip(reason="needs the local SATC corpus (sexandrag download && sexandrag parse)")
+                pytest.mark.skip(reason="needs the local SATC corpus (satc-rag download && satc-rag parse)")
             )
 
 

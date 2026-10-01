@@ -1,11 +1,11 @@
-"""The validated configuration layer (sexandrag.config): defaults, TOML overrides, and early failures."""
+"""The validated configuration layer (satc_rag.config): defaults, TOML overrides, and early failures."""
 
 from dataclasses import replace
 from pathlib import Path
 
 import pytest
 
-from sexandrag.config import (
+from satc_rag.config import (
     BGE_M3,
     ChunkingConfig,
     EvaluationConfig,
@@ -14,11 +14,11 @@ from sexandrag.config import (
     Settings,
     load_settings,
 )
-from sexandrag.errors import ConfigurationError, ModelConfigurationError
+from satc_rag.errors import ConfigurationError, ModelConfigurationError
 
 
 def write_config(root: Path, text: str) -> Path:
-    path = root / "sexandrag.toml"
+    path = root / "satc-rag.toml"
     path.write_text(text, encoding="utf-8")
     return path
 
@@ -130,7 +130,7 @@ def test_the_root_must_exist(tmp_path):
 
 
 def test_the_root_can_come_from_the_environment(tmp_path, monkeypatch):
-    monkeypatch.setenv("SEXANDRAG_ROOT", str(tmp_path))
+    monkeypatch.setenv("SATC_RAG_ROOT", str(tmp_path))
     assert load_settings().paths.root == tmp_path.resolve()
 
 

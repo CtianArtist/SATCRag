@@ -1,9 +1,9 @@
-"""BM25, dense and hybrid retrieval behind the common interface (sexandrag.retrieve)."""
+"""BM25, dense and hybrid retrieval behind the common interface (satc_rag.retrieve)."""
 
 import pytest
 
-from sexandrag.errors import ArtifactMismatchError
-from sexandrag.retrieve import (
+from satc_rag.errors import ArtifactMismatchError
+from satc_rag.retrieve import (
     BM25Retriever,
     ChunkCorpus,
     DenseRetriever,

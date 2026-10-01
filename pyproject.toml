@@ -3,7 +3,7 @@ requires = ["setuptools>=77", "wheel"]
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "sexandrag"
+name = "satc-rag"
 version = "0.1.0"
 description = "Retrieval benchmark (BM25, dense and hybrid) over noisy TV-dialogue subtitles, scored against row-level evidence"
 readme = "README.md"
@@ -42,13 +42,13 @@ dev = [
 ]
 
 [project.scripts]
-sexandrag = "sexandrag.cli:run"
+satc-rag = "satc_rag.cli:run"
 
 [tool.setuptools.packages.find]
 where = ["src"]
 
 [tool.setuptools.package-data]
-sexandrag = ["py.typed"]
+satc_rag = ["py.typed"]
 
 # ------------------------------------------------------------------------------ Ruff
 [tool.ruff]
@@ -79,7 +79,7 @@ ignore = [
 
 [tool.ruff.lint.per-file-ignores]
 # The CLI writes command results to stdout on purpose; everything else logs.
-"src/sexandrag/cli.py" = ["T201"]
+"src/satc_rag/cli.py" = ["T201"]
 "scripts/*" = ["T201", "S603", "S607"]
 # Tests: asserts are the point; fixtures and helpers need no docstrings; seeded `random` drives
 # property-style inputs (not cryptography).
@@ -89,7 +89,7 @@ ignore = [
 "eval/*.py" = ["D1"]
 
 [tool.ruff.lint.isort]
-known-first-party = ["sexandrag", "tests"]
+known-first-party = ["satc_rag", "tests"]
 
 # ------------------------------------------------------------------------------ mypy
 [tool.mypy]
@@ -120,10 +120,10 @@ markers = [
     "model: needs the real 2.3 GB BGE-M3 model (skipped unless run with --run-model or RUN_MODEL_TESTS=1)",
     "corpus: needs the local SATC corpus and its processed artifacts (skipped when absent)",
 ]
-filterwarnings = ["error::DeprecationWarning:sexandrag.*"]
+filterwarnings = ["error::DeprecationWarning:satc_rag.*"]
 
 [tool.coverage.run]
-source = ["sexandrag"]
+source = ["satc_rag"]
 branch = true
 
 [tool.coverage.report]

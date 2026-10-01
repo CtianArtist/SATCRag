@@ -6,14 +6,14 @@ import json
 
 import pytest
 
-from sexandrag.artifacts import chunk_configs, file_sha256
-from sexandrag.chunk import load_chunk_set
-from sexandrag.config import Settings
-from sexandrag.evaluation.validate import by_episode, validate_raw_items
-from sexandrag.jsonl import read_jsonl
-from sexandrag.load import load_rows
-from sexandrag.parse import build_lines
-from sexandrag.speakers import build_case_map, label_counts, load_aliases
+from satc_rag.artifacts import chunk_configs, file_sha256
+from satc_rag.chunk import load_chunk_set
+from satc_rag.config import Settings
+from satc_rag.evaluation.validate import by_episode, validate_raw_items
+from satc_rag.jsonl import read_jsonl
+from satc_rag.load import load_rows
+from satc_rag.parse import build_lines
+from satc_rag.speakers import build_case_map, label_counts, load_aliases
 from tests.conftest import REPO_ROOT
 
 pytestmark = pytest.mark.corpus

@@ -8,9 +8,9 @@ from typing import Any
 
 import numpy as np
 
-from sexandrag.config import Settings
-from sexandrag.embedders import Vectors, ensure_fits
-from sexandrag.tokens import TokenCounter, regex_counter
+from satc_rag.config import Settings
+from satc_rag.embedders import Vectors, ensure_fits
+from satc_rag.tokens import TokenCounter, regex_counter
 
 WORD_RE = re.compile(r"[a-z0-9]+")
 

@@ -1,13 +1,13 @@
-"""Line-record construction and corpus verification (sexandrag.parse), without the real corpus."""
+"""Line-record construction and corpus verification (satc_rag.parse), without the real corpus."""
 
 from dataclasses import replace
 
 import pytest
 
-from sexandrag.config import CorpusConfig, PathsConfig
-from sexandrag.errors import CorpusChecksumError, CorpusError
-from sexandrag.load import RawRow
-from sexandrag.parse import line_id, make_line_records, verify_corpus
+from satc_rag.config import CorpusConfig, PathsConfig
+from satc_rag.errors import CorpusChecksumError, CorpusError
+from satc_rag.load import RawRow
+from satc_rag.parse import line_id, make_line_records, verify_corpus
 from tests.support.builders import write_csv
 
 
@@ -46,7 +46,7 @@ def test_a_different_corpus_is_refused_unless_explicitly_allowed(corpus_paths):
 
 
 def test_the_pinned_corpus_is_accepted(corpus_paths):
-    from sexandrag.artifacts import file_sha256
+    from satc_rag.artifacts import file_sha256
 
     corpus = CorpusConfig(raw_csv_sha256=file_sha256(corpus_paths.raw_csv))
     assert verify_corpus(corpus_paths, corpus) == {
@@ -57,5 +57,5 @@ def test_the_pinned_corpus_is_accepted(corpus_paths):
 
 
 def test_a_missing_corpus_points_to_the_download_command(tmp_path):
-    with pytest.raises(CorpusError, match="sexandrag download"):
+    with pytest.raises(CorpusError, match="satc-rag download"):
         verify_corpus(PathsConfig.under(tmp_path), CorpusConfig())

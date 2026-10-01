@@ -8,7 +8,7 @@ import sys
 import numpy as np
 import pytest
 
-from sexandrag.cli import main
+from satc_rag.cli import main
 from tests.conftest import REPO_ROOT
 from tests.support.fakes import FakeServices
 
@@ -184,7 +184,7 @@ def test_a_missing_corpus_is_an_actionable_error(synthetic_root, capsys):
     (synthetic_root / "data" / "raw" / "SATC_all_lines.csv").unlink()
     assert cli(synthetic_root, "parse") == 1
     err = capsys.readouterr().err
-    assert "sexandrag download" in err
+    assert "satc-rag download" in err
     assert "Traceback" not in err
 
 
@@ -200,7 +200,7 @@ def test_config_is_shown_and_bad_config_fails_early(synthetic_root, capsys):
     assert cli(synthetic_root, "config", "show") == 0
     shown = json.loads(capsys.readouterr().out)
     assert shown["chunking"]["configs"] == [[40, 8], [80, 16]]
-    (synthetic_root / "sexandrag.toml").write_text("[retrieval]\nrrf_k = 'sixty'\n")
+    (synthetic_root / "satc-rag.toml").write_text("[retrieval]\nrrf_k = 'sixty'\n")
     assert cli(synthetic_root, "config", "show") == 1
     assert "wrong type" in capsys.readouterr().err
 
@@ -212,7 +212,7 @@ def test_usage_errors_exit_2():
 
 
 class ExplodingServices(FakeServices):
-    """Services whose model load fails with an unexpected (non-SexAndRag) error."""
+    """Services whose model load fails with an unexpected (non-SATC-RAG) error."""
 
     def embedder(self, settings):
         raise RuntimeError("simulated crash")
@@ -241,12 +241,12 @@ def test_validate_scenes_and_find_commands(project, tmp_path, capsys):
 
 
 def test_model_commands_work_offline_and_explain_a_missing_model(synthetic_root, capsys):
-    config = synthetic_root / "sexandrag.toml"
+    config = synthetic_root / "satc-rag.toml"
     config.write_text(config.read_text() + '\n[paths]\nmodel_cache_dir = "empty-hf-cache"\n')
     assert cli(synthetic_root, "model", "info") == 0
     assert '"pooling_mode": "cls"' in capsys.readouterr().out
     assert cli(synthetic_root, "model", "verify") == 1
-    assert "sexandrag model download" in capsys.readouterr().err
+    assert "satc-rag model download" in capsys.readouterr().err
     assert cli(synthetic_root, "verify", "--only", "model") == 0  # missing is reported, not a failure...
     assert "MISSING  model" in capsys.readouterr().out
     assert cli(synthetic_root, "verify", "--only", "model", "--strict") == 1  # ...unless --strict

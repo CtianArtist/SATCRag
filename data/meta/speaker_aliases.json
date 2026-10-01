@@ -1,5 +1,5 @@
 {
-  "_about": "Explicit speaker-label aliases applied by sexandrag.speakers (src/sexandrag/speakers.py). Keys are labels after whitespace/parenthesis/number/case cleanup. Every entry was checked against the surrounding dialogue; the reason says what the evidence was. Ambiguous names (Sam, Jack) are only mapped inside the listed episodes.",
+  "_about": "Explicit speaker-label aliases applied by satc_rag.speakers (src/satc_rag/speakers.py). Keys are labels after whitespace/parenthesis/number/case cleanup. Every entry was checked against the surrounding dialogue; the reason says what the evidence was. Ambiguous names (Sam, Jack) are only mapped inside the listed episodes.",
   "global": [
     {"from": "Carre", "to": "Carrie", "reason": "Typo; S3E2 row sits inside a Carrie exchange."},
     {"from": "Carie", "to": "Carrie", "reason": "Typo; S4E4 narration line."},

@@ -4,8 +4,8 @@ import random
 
 import pytest
 
-from sexandrag.errors import EvaluationError
-from sexandrag.evaluation.split import choose_dev, imbalance, type_quotas
+from satc_rag.errors import EvaluationError
+from satc_rag.evaluation.split import choose_dev, imbalance, type_quotas
 
 
 def synthetic_strata(n_per_type=10):

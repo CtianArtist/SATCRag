@@ -4,9 +4,9 @@ import json
 
 import pytest
 
-from sexandrag.errors import EvaluationSchemaError
-from sexandrag.evaluation.schema import load_items, parse_item, parse_items
-from sexandrag.provenance import Span
+from satc_rag.errors import EvaluationSchemaError
+from satc_rag.evaluation.schema import load_items, parse_item, parse_items
+from satc_rag.provenance import Span
 from tests.support.builders import chunk_at
 
 A = {"season": 3, "episode": 5, "source_row_start": 253, "source_row_end": 255, "expected_quote": "a"}

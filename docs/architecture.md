@@ -1,6 +1,6 @@
 # Architecture
 
-SexAndRag is a pipeline of explicit steps. Each step reads the previous step's artifact, checks that
+SATC-RAG is a pipeline of explicit steps. Each step reads the previous step's artifact, checks that
 it is the artifact it expects, and writes its own artifact together with a fingerprint. No step builds
 anything implicitly: retrieval never builds an index, and evaluation never re-chunks.
 
@@ -16,8 +16,8 @@ Four principles hold throughout:
 ```mermaid
 flowchart TB
     subgraph setup["explicit setup (the only networked steps)"]
-        DL["sexandrag download<br/>Kaggle v3 → data/raw/"]
-        MD["sexandrag model download<br/>pinned commit → HF cache"]
+        DL["satc-rag download<br/>Kaggle v3 → data/raw/"]
+        MD["satc-rag model download<br/>pinned commit → HF cache"]
     end
     subgraph build["build (deterministic, fingerprinted)"]
         LOAD["load.py<br/>row repairs"] --> CLEAN["clean.py + speakers.py<br/>named rules"]
@@ -65,11 +65,11 @@ flowchart TB
 | `provenance.py` | Row spans, overlap-based relevance, quote lookup. |
 | `evaluation/` | The item schema, metrics, held-out guard, runner, results layout, validator, and freeze/split. |
 | `verify.py`, `environment.py` | Checks on every artifact; library versions and git state for run records. |
-| `cli.py` | The `sexandrag` command: one handler per subcommand, and the exit codes. |
+| `cli.py` | The `satc-rag` command: one handler per subcommand, and the exit codes. |
 
 ## Ingestion
 
-- **Obtaining the corpus.** `sexandrag download` fetches version 3 of the Kaggle dataset with kagglehub.
+- **Obtaining the corpus.** `satc-rag download` fetches version 3 of the Kaggle dataset with kagglehub.
   - The file must match the SHA-256 pinned in the configuration. A download that does not match is
     deleted again.
   - An existing different file is only replaced with `--force`.
@@ -124,7 +124,7 @@ that changed a line is stored with it:
   - `raw_text` beside `clean_text`;
   - `text_rules`, `speaker_rules` and `row_fixes`: the names of every rule and repair that touched
     the record.
-- **The parse report** (`parse_report.json`, and `sexandrag parse --report`) counts every repair and
+- **The parse report** (`parse_report.json`, and `satc-rag parse --report`) counts every repair and
   rule, with a few short examples of each. It is derived from the corpus, so it stays local.
 - **Spans.** A `Span` (`provenance.py`) is an inclusive range of one episode's source rows.
   - A chunk is relevant to a span when it comes from the same episode and its row range overlaps
@@ -180,7 +180,7 @@ that changed a line is stored with it:
 - **No truncation.** sentence-transformers silently cuts input at its maximum sequence length. So
   every text is token-counted with the model's tokenizer, special tokens included, before encoding,
   and anything over the context raises `TextTooLongError`.
-- **Building an index** (`index.py`, and `sexandrag index`, which is explicit and slow on CPU):
+- **Building an index** (`index.py`, and `satc-rag index`, which is explicit and slow on CPU):
   - Chunks are embedded in batches, and the vectors are checked for shape, finite values and unit
     length.
   - The index is written to a temporary folder and renamed into place, so an interrupted build
@@ -247,31 +247,31 @@ Indexing and retrieval code never import evaluation code.
 
 | Artifact | Identity | Checked on every load | Rebuild |
 |---|---|---|---|
-| Raw CSV | pinned SHA-256 | checksum (`parse`, `verify`) | `sexandrag download` |
-| `lines.jsonl` | its SHA-256, recorded in each chunk manifest | parse report says it came from the pinned corpus (`verify`) | `sexandrag parse` |
-| Chunk set | size, overlap, tokenizer and revision | chunk-file hash, `lines.jsonl` hash, tokenizer, settings, chunk count | `sexandrag chunk --size N --overlap M` |
-| Dense index | content key (embedded texts + embedder identity) | key, chunk ids and order, vector shape, finite values, unit norm; leftover `.tmp` folders flagged | `sexandrag index --size N [--rebuild]` |
-| Model snapshot | repository + 40-character commit | every file's digest (weights with `--deep`), module stack, pooling | `sexandrag model download` |
+| Raw CSV | pinned SHA-256 | checksum (`parse`, `verify`) | `satc-rag download` |
+| `lines.jsonl` | its SHA-256, recorded in each chunk manifest | parse report says it came from the pinned corpus (`verify`) | `satc-rag parse` |
+| Chunk set | size, overlap, tokenizer and revision | chunk-file hash, `lines.jsonl` hash, tokenizer, settings, chunk count | `satc-rag chunk --size N --overlap M` |
+| Dense index | content key (embedded texts + embedder identity) | key, chunk ids and order, vector shape, finite values, unit norm; leftover `.tmp` folders flagged | `satc-rag index --size N [--rebuild]` |
+| Model snapshot | repository + 40-character commit | every file's digest (weights with `--deep`), module stack, pooling | `satc-rag model download` |
 | Frozen benchmark | `eval/frozen/MANIFEST.json` | every file's SHA-256; the recorded seed and strata still reproduce the split | never rebuilt; the freeze is permanent |
 
-`sexandrag verify` runs every check above without changing anything. It reports a component as
+`satc-rag verify` runs every check above without changing anything. It reports a component as
 *missing* when it has not been built yet, as on a fresh clone, and as *failed* when it exists but is
 wrong. A failure gives a nonzero exit, and so does a missing component under `--strict`.
 
 ## Configuration, logging and errors
 
 - **Configuration** (`config.py`) is built from defaults, then an optional TOML file (`--config`,
-  `$SEXANDRAG_CONFIG` or `<root>/sexandrag.toml`), then a few command-line options (root, verbosity).
+  `$SATC_RAG_CONFIG` or `<root>/satc-rag.toml`), then a few command-line options (root, verbosity).
   - Every problem is collected and reported at once, before any work starts: unknown keys, wrong
     types, and contradictions such as an overlap at least as large as its chunk size, or a chunk size
     over the model's context.
-  - `sexandrag config show` prints the effective settings.
+  - `satc-rag config show` prints the effective settings.
 - **Logging.** Library modules log through `logging` and never print. The CLI sends diagnostics to
   stderr and results to stdout.
   - Log messages name files, counts, ids and hashes, never transcript passages.
   - `-v` turns on debug messages and `-q` shows warnings and errors only. `--debug` also shows
     third-party library logs and full tracebacks.
-- **Errors.** Every deliberate error derives from `SexAndRagError` and states what failed, the expected
+- **Errors.** Every deliberate error derives from `SatcRagError` and states what failed, the expected
   and actual values, and how to recover. The exception families are `ConfigurationError`,
   `CorpusError`, `MetadataError`, `ArtifactError`, `ModelError`, `EvaluationError` and
   `DownloadError`, each with narrower subclasses.

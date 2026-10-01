@@ -5,14 +5,14 @@ placeholders**, so nothing is published by accident.
 
 ```
 results/
-  runs/       one directory per evaluation run, written by `sexandrag eval` (never committed)
+  runs/       one directory per evaluation run, written by `satc-rag eval` (never committed)
   reports/    write-ups and summary tables chosen for publication
   figures/    plots chosen for publication
 ```
 
 ## Run directories
 
-Every `sexandrag eval` creates a new directory. An existing one is never reused or overwritten; if the
+Every `satc-rag eval` creates a new directory. An existing one is never reused or overwritten; if the
 name is already taken, `-2`, `-3` and so on is appended.
 
 ```
@@ -42,7 +42,7 @@ Each row of `queries.jsonl` holds:
 
 Run files store chunk ids and row spans, never chunk text, so a run can be inspected alongside the
 local corpus without copying the corpus into the results. To see a chunk, use
-`sexandrag inspect <chunk id>`.
+`satc-rag inspect <chunk id>`.
 
 ## Publishing a result
 

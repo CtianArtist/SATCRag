@@ -1,4 +1,4 @@
-"""Token-based chunk boundaries and chunk-set manifests (sexandrag.chunk)."""
+"""Token-based chunk boundaries and chunk-set manifests (satc_rag.chunk)."""
 
 import json
 import random
@@ -6,11 +6,11 @@ from itertools import pairwise
 
 import pytest
 
-from sexandrag.artifacts import ChunkConfig
-from sexandrag.chunk import build_chunk_set, chunk_all, format_line, load_chunk_set, pack_windows
-from sexandrag.config import DEFAULT_SCENES
-from sexandrag.errors import ArtifactMismatchError, ArtifactMissingError, StaleArtifactError
-from sexandrag.tokens import regex_counter
+from satc_rag.artifacts import ChunkConfig
+from satc_rag.chunk import build_chunk_set, chunk_all, format_line, load_chunk_set, pack_windows
+from satc_rag.config import DEFAULT_SCENES
+from satc_rag.errors import ArtifactMismatchError, ArtifactMissingError, StaleArtifactError
+from satc_rag.tokens import regex_counter
 from tests.support.builders import episode_lines
 
 
@@ -120,7 +120,7 @@ def test_chunk_sets_refuse_altered_or_stale_files(built):
     path.write_text(path.read_text() + "\n")
     with pytest.raises(StaleArtifactError, match="chunk file changed") as error:
         load_chunk_set(config, chunks_dir, lines_path)
-    assert "sexandrag chunk --size 40 --overlap 8" in str(error.value)
+    assert "satc-rag chunk --size 40 --overlap 8" in str(error.value)
 
 
 def test_a_changed_lines_file_makes_the_chunks_stale(built):

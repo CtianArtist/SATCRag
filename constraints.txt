@@ -1,7 +1,7 @@
 # Exact versions of every dependency (direct and transitive) in the verified environment.
 # Use with: pip install -e ".[dev]" -c constraints.txt   (after installing CPU-only torch; see the README).
 # Torch is pinned in pyproject.toml and installed from the PyTorch CPU index, so it is not listed here.
-# Regenerate after an intentional upgrade: pip freeze --exclude-editable | grep -viE '^(torch|sexandrag|setuptools)=='
+# Regenerate after an intentional upgrade: pip freeze --exclude-editable | grep -viE '^(torch|satc[-_]rag|setuptools)=='
 annotated-doc==0.0.5
 anyio==4.15.1
 ast_serialize==0.11.2

@@ -49,7 +49,7 @@ MUST_BE_IGNORED = [
     "results/runs/20260101T000000Z-dev-abcdef0/metrics.json",
     "results/reports/dev-baseline.md",
     "results/figures/recall-by-chunk-size.png",
-    "src/sexandrag/__pycache__/cli.cpython-314.pyc",
+    "src/satc_rag/__pycache__/cli.cpython-314.pyc",
     ".env",
 ]
 MAX_TRACKED_BYTES = 2 * 1024 * 1024  # anything larger deserves a deliberate decision

@@ -6,10 +6,10 @@ import shutil
 
 import pytest
 
-from sexandrag.config import PathsConfig
-from sexandrag.errors import HeldOutSetError
-from sexandrag.evaluation.heldout import guard_held_out
-from sexandrag.evaluation.schema import load_items
+from satc_rag.config import PathsConfig
+from satc_rag.errors import HeldOutSetError
+from satc_rag.evaluation.heldout import guard_held_out
+from satc_rag.evaluation.schema import load_items
 
 
 @pytest.fixture
@@ -55,7 +55,7 @@ def test_test_questions_under_new_ids_are_refused(paths, tmp_path):
 
 
 def test_the_explicit_opt_in_allows_the_run_and_logs_it(paths, caplog):
-    with caplog.at_level(logging.WARNING, logger="sexandrag"):
+    with caplog.at_level(logging.WARNING, logger="satc_rag"):
         assert guard_held_out(paths.test_file, load_items(paths.test_file), paths, allow_heldout=True) is True
     assert "HELD-OUT TEST SET RUN" in caplog.text
 

@@ -7,11 +7,11 @@ from dataclasses import replace
 
 import pytest
 
-from sexandrag.config import BGE_M3, CorpusConfig, PathsConfig
-from sexandrag.download import download_corpus
-from sexandrag.errors import CorpusChecksumError, DownloadError, ModelNotAvailableError
-from sexandrag.model import download_snapshot
-from sexandrag.tokens import tokenizer_counter
+from satc_rag.config import BGE_M3, CorpusConfig, PathsConfig
+from satc_rag.download import download_corpus
+from satc_rag.errors import CorpusChecksumError, DownloadError, ModelNotAvailableError
+from satc_rag.model import download_snapshot
+from satc_rag.tokens import tokenizer_counter
 
 CSV = b",Season,Episode,Speaker,Line,date_job\n0,1.0,1.0,Carrie,Hello.,\n"
 

@@ -11,7 +11,7 @@ install:  ## CPU-only torch, then the package with dev tools at the tested versi
 	$(PYTHON) -m pip install torch==2.14.0 --index-url $(TORCH_INDEX)
 	$(PYTHON) -m pip install -e ".[dev]" -c constraints.txt
 
-install-download:  ## add kagglehub for `sexandrag download`
+install-download:  ## add kagglehub for `satc-rag download`
 	$(PYTHON) -m pip install -e ".[download]" -c constraints.txt
 
 check:  ## the full production gate (format, lint, types, tests, frozen hashes, hygiene)
@@ -36,7 +36,7 @@ coverage:  ## tests with a line and branch coverage report
 	PYTHONDONTWRITEBYTECODE=1 $(PYTHON) -m pytest -p no:cacheprovider --cov --cov-report=term-missing
 
 verify:  ## check every local artifact (corpus, chunks, indexes, model, frozen benchmark)
-	sexandrag verify
+	satc-rag verify
 
 hygiene:  ## fail if git would publish anything that must stay local
 	$(PYTHON) scripts/check_repo_hygiene.py

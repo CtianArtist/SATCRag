@@ -55,7 +55,7 @@ jobs:
         run: python -m pytest -p no:cacheprovider --cov --cov-report=term-missing
 
       - name: Frozen benchmark hashes and split
-        run: sexandrag verify --only benchmark
+        run: satc-rag verify --only benchmark
 
       - name: Repository hygiene
         run: python scripts/check_repo_hygiene.py

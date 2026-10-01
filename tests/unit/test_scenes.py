@@ -1,10 +1,10 @@
-"""Optional heuristic scene grouping (sexandrag.scenes)."""
+"""Optional heuristic scene grouping (satc_rag.scenes)."""
 
 import copy
 from itertools import pairwise
 from typing import Any
 
-from sexandrag.scenes import detect_scenes, scene_numbers
+from satc_rag.scenes import detect_scenes, scene_numbers
 from tests.support.builders import episode_lines
 
 

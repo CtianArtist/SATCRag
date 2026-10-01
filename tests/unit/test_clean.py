@@ -1,8 +1,8 @@
-"""Conservative text cleaning and turn splitting (sexandrag.clean)."""
+"""Conservative text cleaning and turn splitting (satc_rag.clean)."""
 
 import pytest
 
-from sexandrag.clean import clean_row_text
+from satc_rag.clean import clean_row_text
 
 
 def texts(raw: str) -> list[str]:

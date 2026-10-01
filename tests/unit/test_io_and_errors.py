@@ -5,10 +5,10 @@ from datetime import UTC, datetime
 
 import pytest
 
-from sexandrag.episodes import load_episode_titles
-from sexandrag.errors import ArtifactMismatchError, ArtifactMissingError, MetadataError, SexAndRagError
-from sexandrag.evaluation.results import create_run_dir, run_id
-from sexandrag.jsonl import read_json, read_jsonl, write_jsonl
+from satc_rag.episodes import load_episode_titles
+from satc_rag.errors import ArtifactMismatchError, ArtifactMissingError, MetadataError, SatcRagError
+from satc_rag.evaluation.results import create_run_dir, run_id
+from satc_rag.jsonl import read_json, read_jsonl, write_jsonl
 
 
 def test_jsonl_round_trips_and_skips_blank_lines(tmp_path):
@@ -69,13 +69,13 @@ def test_episode_metadata_must_be_complete_and_unique(tmp_path):
 
 
 def test_errors_explain_what_expected_actual_and_how_to_fix():
-    error = SexAndRagError("the cache is stale", expected="abc", actual="def", recovery="rebuild it")
+    error = SatcRagError("the cache is stale", expected="abc", actual="def", recovery="rebuild it")
     assert str(error) == "the cache is stale\n  expected: abc\n  actual:   def\n  fix:      rebuild it"
-    assert str(SexAndRagError("plain")) == "plain"
+    assert str(SatcRagError("plain")) == "plain"
 
 
 def test_write_json_output_is_valid_json(tmp_path):
-    from sexandrag.jsonl import write_json
+    from satc_rag.jsonl import write_json
 
     write_json(tmp_path / "a" / "b.json", {"x": [1, 2]})
     assert json.loads((tmp_path / "a" / "b.json").read_text()) == {"x": [1, 2]}

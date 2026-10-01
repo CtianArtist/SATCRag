@@ -5,13 +5,13 @@ import json
 import numpy as np
 import pytest
 
-from sexandrag.artifacts import chunk_config_for_size
-from sexandrag.chunk import load_chunk_set
-from sexandrag.config import Settings
-from sexandrag.embedders import SentenceTransformerEmbedder
-from sexandrag.errors import ModelConfigurationError, TextTooLongError
-from sexandrag.index import index_location
-from sexandrag.services import PinnedModelServices
+from satc_rag.artifacts import chunk_config_for_size
+from satc_rag.chunk import load_chunk_set
+from satc_rag.config import Settings
+from satc_rag.embedders import SentenceTransformerEmbedder
+from satc_rag.errors import ModelConfigurationError, TextTooLongError
+from satc_rag.index import index_location
+from satc_rag.services import PinnedModelServices
 from tests.conftest import REPO_ROOT
 
 pytestmark = pytest.mark.model

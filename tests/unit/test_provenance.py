@@ -1,10 +1,10 @@
-"""Source-row spans, relevance by overlap, and quote lookup (sexandrag.provenance)."""
+"""Source-row spans, relevance by overlap, and quote lookup (satc_rag.provenance)."""
 
 import pytest
 
-from sexandrag.chunk import chunk_all
-from sexandrag.provenance import Span, find_quote, quote_status, spans_overlap
-from sexandrag.tokens import regex_counter
+from satc_rag.chunk import chunk_all
+from satc_rag.provenance import Span, find_quote, quote_status, spans_overlap
+from satc_rag.tokens import regex_counter
 from tests.support.builders import chunk_at, episode_lines, make_line
 
 
